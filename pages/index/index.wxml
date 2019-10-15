@@ -46,14 +46,14 @@
 
 <i-index-title title="量肤定制" subtitle='解锁焕新"肌"蜜'></i-index-title>
 <view class="product-lists">
-  <navigator class="product-item" hover-class="none" wx:for="{{products1}}" wx:key="index" url="/pages/goods/index?pid={{item.product_img}}">
+  <navigator class="product-item" hover-class="none" wx:for="{{products1}}" wx:key="index" url="/pages/goods/index?pid={{item.product_id}}">
     <image class="product-img" mode="widthFix" src="{{item.product_img}}"></image>
   </navigator>
 </view>
 
 <i-index-title title="明星爆品" subtitle='让你一次美个够'></i-index-title>
 <view class="product-lists">
-  <navigator class="product-item" hover-class="none" wx:for="{{products2}}" wx:key="index" url="/pages/goods/index?pid={{item.product_img}}">
+  <navigator class="product-item" hover-class="none" wx:for="{{products2}}" wx:key="index" url="/pages/goods/index?pid={{item.product_id}}">
     <image class="product-img" mode="widthFix" src="{{item.product_img}}"></image>
   </navigator>
 </view>
