@@ -1,0 +1,8 @@
+<view class="index-title">
+  <view class="index-title-main">
+    <view class="index-title-line left"></view>
+    <view class="index-title-txt">{{title}}</view>
+    <view class="index-title-line right"></view>
+  </view>
+  <view class="index-title-sub"><view>{{subtitle}}</view></view>
+</view>

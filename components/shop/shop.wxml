@@ -1,0 +1,29 @@
+<view class="shop" hidden="{{hidden}}">
+  <view class="mask" animation="{{animationMask}}" catchtouchmove="unmove" catchtap="closeShop"></view>
+  <view class="shop-container" animation="{{animationContainer}}">
+    
+    <view class="shop-product">
+      <view class="close-modal" catchtap="closeShop">×</view>
+      <image class="product-img" mode="aspectFill" src="{{product.product_img}}"></image>
+      <view class="product-info">
+        <view class="product-price">￥{{product.product_price}}</view>
+        <view class="product-stock">库存:{{stock}}</view>
+      </view> 
+    </view>
+    <view class="product-count">
+      <view class="product-label">数量</view>
+      <view class="count-control">
+        <view class="count-reduce" bindtap="countReduce"></view>
+        <input class="count-input" type="number" value="{{count}}" bindinput="setCount" bindblur="countblur"></input>
+        <view class="count-add" bindtap="countAdd"></view>
+      </view>
+    </view>
+    <view class="shop-operate">
+      <block wx:if="{{stock}}">
+        <view class="shop-btn addcart" bindtap="addToCart">加入购物车</view>
+        <view class="shop-btn shopping" bindtap="shopping">立即购买</view>
+      </block>
+      <view class="shop-btn nostock" wx:else>库存不足</view>
+    </view>
+  </view>
+</view>

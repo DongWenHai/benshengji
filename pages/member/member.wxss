@@ -1,0 +1,34 @@
+.member{
+  padding-top:80rpx;
+}
+.member-header{
+  height:80rpx;
+  display:flex;
+  align-items: center;
+  background:#fff;
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  z-index:10;
+}
+.member-hd{
+  font-size:28rpx;
+  color:#999;
+  flex:3;
+  text-align: center;
+}
+.member-item{
+  display:flex;
+  align-items: center;
+  padding:20rpx 0;
+}
+.member-item view{
+  flex:3;
+  font-size:28rpx;
+  color:#333;
+  text-align: center;
+}
+.viewdetail{
+  color:#258985;
+}

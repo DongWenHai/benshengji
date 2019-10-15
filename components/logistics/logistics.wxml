@@ -1,0 +1,21 @@
+<view class="logistics" wx:if="{{show}}">
+  <view class="mask" catchtouchmove='untouch' catchtap="closeLogistics"></view>
+  <view class="logistics-container">
+    <view class="logistics-title">物流查询</view>
+    <view class="logistics-info">
+      <view class="logistics-id">物流单号:{{logistics.LogisticCode}}</view>
+      <view class="logistics-store">快递公司:{{logistics.ShipperCode}}</view>
+    </view>
+    <view class="logistics-travel">
+
+      <view class="logistics-travel-item" wx:for="{{logistics.Traces}}" wx:key="index">
+        <view class="logistics-sign"></view>
+        <view class="logistics-detail">
+          <view class="logistics-time">{{item.AcceptTime}}</view>
+          <view class="logistics-content">{{item.AcceptStation}}</view>
+        </view>
+      </view>
+      
+    </view>
+  </view>
+</view>

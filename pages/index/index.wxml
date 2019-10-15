@@ -1,0 +1,72 @@
+<view class="index-header">
+  <image class="store-logo" src="/images/logo.png"></image>
+  <view class="search-container">
+    <image bindtap="search" class="search-icon" src="/images/icon-search.png"></image>
+    <input class="search-input" placeholder="{{placeholder}}" value="{{keywords}}" bindinput="setKeywords" bindconfirm="search" placeholder-style="color:#7D7D7D"></input>
+  </view>
+</view>
+
+<swiper class="swiper-main" indicator-dots="true" autoplay="true" indicator-color="#8E8E8E" indicator-active-color="#79C471" wx:if="{{banner_top.length}}">
+  <swiper-item wx:for="{{banner_top}}" wx:key="index">
+    <!-- <image src="/source/_20191006155102.png"></image> -->
+    <i-img width="750rpx"  height="1032rpx" loadImg="{{item.imageUrl}}"></i-img>
+  </swiper-item>
+</swiper>
+
+<view class="store-motto">本生吉●奢享特权</view>
+
+<swiper class="swiper-sub" indicator-dots="true" autoplay="true" indicator-color="#8E8E8E" indicator-active-color="#79C471" wx:if="{{banner_middle.length}}">
+  <swiper-item wx:for="{{banner_middle}}" wx:key="index"><i-img width="750rpx" height="460rpx" loadImg="{{item.imageUrl}}"></i-img></swiper-item>
+</swiper>
+
+<!-- 优惠券 -->
+<view class="coupon-container" wx:if="{{coupons.length}}">
+  <view class="coupon-title">领券畅享优惠</view>
+  <view class="coupon-list">
+    <view class="coupon-item" wx:for="{{coupons}}" wx:key="index">
+      <image class="coupon-img" mode="aspectFit" src="{{item.coupon_image}}"></image>
+    </view>
+  </view>
+</view>
+
+<view class="nav-container">
+  <view class="nav-item">
+    <image class="index-nav-image" mode="aspectFit" src="/images/index-nav-1.png"></image>
+  </view>
+  <view class="nav-item">
+    <image class="index-nav-image" mode="aspectFit" src="/images/index-nav-2.png"></image>
+  </view>
+  <view class="nav-item">
+    <image class="index-nav-image" mode="aspectFit" src="/images/index-nav-3.png"></image>
+  </view>
+  <view class="nav-item">
+    <image class="index-nav-image" mode="aspectFit" src="/images/index-nav-4.png"></image>
+  </view>
+</view>
+
+<i-index-title title="量肤定制" subtitle='解锁焕新"肌"蜜'></i-index-title>
+<view class="product-lists">
+  <navigator class="product-item" hover-class="none" wx:for="{{products1}}" wx:key="index" url="/pages/goods/index?pid={{item.product_img}}">
+    <image class="product-img" mode="widthFix" src="{{item.product_img}}"></image>
+  </navigator>
+</view>
+
+<i-index-title title="明星爆品" subtitle='让你一次美个够'></i-index-title>
+<view class="product-lists">
+  <navigator class="product-item" hover-class="none" wx:for="{{products2}}" wx:key="index" url="/pages/goods/index?pid={{item.product_img}}">
+    <image class="product-img" mode="widthFix" src="{{item.product_img}}"></image>
+  </navigator>
+</view>
+
+<!-- 本生吉之家 -->
+<view class="bsj-home" wx:if="{{banner_bottom.length}}">
+  <view class="bsj-title">还原初之美</view>
+  <view class="bsj-subtitle">本生吉，肌肤之美艺术家</view>
+  <swiper class="bsj-swiper-container" indicator-dots="true" autoplay="true" indicator-color="#8E8E8E" indicator-active-color="#79C471">
+    <swiper-item wx:for="{{banner_bottom}}" wx:key>
+      <i-img width="750rpx" height="466rpx" loadImg="{{item.imageUrl}}"></i-img>
+    </swiper-item>
+  </swiper>
+</view>
+
+<image class="bsg-store-info" mode="widthFix" src="/images/bsj-store.jpg"></image>

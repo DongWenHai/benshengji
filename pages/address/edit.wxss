@@ -1,0 +1,49 @@
+page{
+  background:#f4f4f4;
+}
+.addaddress{
+  border-top:20rpx solid #f4f4f4;
+}
+.weui-cell{
+  display: flex;
+  padding: 0 30rpx;
+  height: 100rpx;
+  align-items: center;
+}
+
+.weui-cell-name{
+  border-bottom: 1px solid #eee;
+}
+
+.weui-cell_access{
+  border-bottom: 1px solid #eee;
+}
+
+.weui-cell__hd{
+  display: flex;
+  align-items: center;
+}
+.label-txt{
+  width:184rpx;
+}
+.r_mt20{margin-top:20rpx;}
+.f16{font-size:16px;}
+.f15{font-size:15px;}
+.cl_b6{color:#666}
+.bg_white{background:#fff;}
+
+.t-btn{
+  width:690rpx;
+  height:44px;
+  line-height:44px;
+  text-align: center;
+  color:#fff;
+  background:#258985;
+  margin:106rpx auto 0;
+  border-radius:4px;
+}
+.address-select{
+  width:36rpx;
+  height:36rpx;
+  margin-right:20rpx;
+}

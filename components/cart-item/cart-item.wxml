@@ -1,0 +1,19 @@
+<view class="cart-item-container">
+  <view class="cart-item">
+    <view class="cart-select-status" catchtap='checkEvent'>
+      <image class="icon-select" src="/images/select{{content.select_status=='1'?'ed':''}}.png"></image>
+    </view>
+
+    <i-img imgClass="cart-img" width="170rpx" height="170rpx" isCircle="12rpx" loadImg="{{content.product_thumb_img}}"></i-img>
+
+    <view class="cart-item-info">
+      <view class="cart-pname">{{content.product_name}}</view>
+      <view class="cart-pattr">{{content.attr_name}}</view>
+      <view class="cart-price">￥{{content.product_price}}</view>
+      <i-input iClass="cart-input" bind:change="changeNumber" bind:focus="onFocus" value="{{content.product_count}}" min="{{content.min}}" max="{{content.max}}"></i-input>
+    </view>
+  </view>
+  <view class="cart-activity-barge" wx:if="{{content.is_second_two_money=='1'}}">
+    <view class="cart-activoty-two">参加活动第二件2元</view>
+  </view>
+</view>

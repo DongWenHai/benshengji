@@ -1,0 +1,38 @@
+<view class="refund">
+
+  <view class="refund-lists">
+    <view class="refund-lists-item" wx:for="{{products}}" wx:key="index">
+      <i-img width="120rpx" height="120rpx" loadImg="{{item.imgs}}"></i-img>
+      <view class="refund-product-info">
+        <view class="refund-product-name">{{item.product_name}}</view>
+        <view class="refund-product-price">¥{{item.product_price}}</view>
+      </view>
+      <view class="refund-product-count">×{{item.product_count}}</view>
+    </view>
+  </view>
+
+  <view class="form-card">
+    <view class="form-card-tab">
+      <view class="form-card-tab-item {{type==2?'active':''}}" data-type="2" bindtap="toggleType">仅退款</view>
+      <view class="form-card-tab-item {{type==1?'active':''}}" data-type="1" bindtap="toggleType">退货退款</view>
+    </view>
+
+    <view class="form-card-item">
+      <view class="form-card-label">退款原因</view>
+      <view class="form-card-reason">
+        <picker mode="selector" range="{{type==1?reason1:reason2}}" range-key="name" bindchange="selectReason">
+          <text class="reason-selected" wx:if="{{reasonName}}">{{reasonName}}</text>
+          <text class="reason-placeholder" wx:else>请选择</text>
+        </picker>
+        
+      </view>
+    </view>
+    <view class="form-card-item">
+      <view class="form-card-label">退款说明</view>
+      <input class="form-card-explain" type="text" maxlength='100' placeholder='选填' placeholder-style='color:#999;' value="{{remark}}" bindinput='setRemark'></input>
+    </view>
+
+    <view class="refund-confirm" bindtap="submitForm">确定</view>
+  </view>
+
+</view>

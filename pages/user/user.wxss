@@ -1,0 +1,220 @@
+page{
+  background:#fff;
+  height:100%;
+}
+.user{
+  position:relative;
+  padding-top:56rpx;
+  box-sizing: border-box;
+  z-index:1;
+}
+.user:before{
+  content:'';
+  display:block;
+  width:160%;
+  height:360rpx;
+  border-radius:50%;
+  background:#006F46;
+  position:absolute;
+  top:-180rpx;
+  left:50%;
+  transform: translateX(-50%);
+  z-index:-1;
+}
+.user-card{
+  width:708rpx;
+  background:#fff;
+  border-radius:16rpx;
+  margin:0 auto;
+  box-shadow: 0rpx 20rpx 10rpx 0 rgba(224,224,224,0.3); 
+}
+.user-info{
+  display:flex;
+  padding:24rpx 50rpx;
+  box-sizing: border-box;
+}
+.user-info-co{
+  display:flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.user-avater{
+  border:1px solid #ddd;
+  box-shadow: 0rpx 20rpx 10rpx 0 rgba(224,224,224,0.3); 
+}
+.user-name{
+  font-size:34rpx;
+  color:#333;
+  padding-top:30rpx;
+  margin-left:32rpx;
+  padding-right:26rpx;
+  position:relative;
+}
+.user-name::after{
+  content: " ";
+  display: inline-block;
+  height: 12rpx;
+  width: 12rpx;
+  border-width: 2px 2px 0 0;
+  border-color: #c8c8cd;
+  border-style: solid;
+  -webkit-transform: matrix(.71,.71,-.71,.71,0,0);
+  transform: matrix(.71,.71,-.71,.71,0,0);
+  position: absolute;
+  top: 50%;
+  right: 0rpx;
+  margin-top: 10rpx;
+}
+.user-level{
+  /* display:inline-block; */
+  background:#006f46;
+  height:42rpx;
+  line-height:42rpx;
+  color:#fff;
+  border-radius:21rpx;
+  padding:0 10rpx;
+  margin-top:24rpx;
+  font-size:28rpx;
+  margin-left:30rpx;
+  text-align: center;
+}
+.user-data{
+  display:flex;
+  justify-content: space-around;
+  padding:40rpx 0 28rpx 0;
+}
+.user-data-item{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+.user-data-value{
+  color:#007a2c;
+  font-size:30rpx;
+}
+.user-data-value .unit{
+  font-size:20rpx;
+}
+.user-data-name{
+  color:#3c3c3c;
+  margin-top:10rpx;
+  font-size:28rpx;
+}
+.user-order{
+  margin-top:30rpx;
+  border-bottom:20rpx solid #f4f4f4;
+}
+.user-order-header{
+  height:90rpx;
+  display:flex;
+  align-items: center;
+  padding:0 30rpx;
+  box-sizing: border-box;
+  border-bottom:1px solid #efefef;
+
+}
+.user-order-header-icon{
+  width:44rpx;
+  height:44rpx;
+}
+.user-order-header-bd{
+  font-size:28rpx;
+  color:#333;
+  margin-left:10rpx;
+  flex:1;
+}
+.user-order-header-ft{
+  white-space: nowrap;
+  color:#999;
+  font-size:22rpx;
+  position:relative;
+  padding-right:26rpx;
+}
+.user-order-header-ft::after{
+  content: " ";
+  display: inline-block;
+  height: 12rpx;
+  width: 12rpx;
+  border-width: 1px 1px 0 0;
+  border-color: #c8c8cd;
+  border-style: solid;
+  -webkit-transform: matrix(.71,.71,-.71,.71,0,0);
+  transform: matrix(.71,.71,-.71,.71,0,0);
+  position: absolute;
+  top: 50%;
+  right: 0rpx;
+  margin-top: -8rpx;
+}
+.user-orders{
+  display:flex;
+  align-items: center;
+  justify-content: space-around;
+  height:192rpx;
+}
+.user-order-item{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.user-order-icon{
+  width:70rpx;
+  height:70rpx;
+}
+.user-order-name{
+  font-size:28rpx;
+  color:#4c4c4c;
+}
+.user-nav-item{
+  display:flex;
+  padding:20rpx 30rpx;
+  box-sizing: border-box;
+  border-bottom:1px solid #efefef;
+}
+.user-nav-icon{
+  width:44rpx;
+  height:44rpx;
+  margin-right:20rpx;
+}
+.user-nav-name{
+  font-size:28rpx;
+  color:#333;
+  flex:1;
+}
+.user-nav-bd{
+  flex:1;
+  font-size:30rpx;
+}
+.user-nav-ft{
+  padding-right:26rpx;
+  position: relative;
+}
+.user-nav-ft::after{
+  content: " ";
+  display: inline-block;
+  height: 12rpx;
+  width: 12rpx;
+  border-width: 1px 1px 0 0;
+  border-color: #c8c8cd;
+  border-style: solid;
+  -webkit-transform: matrix(.71,.71,-.71,.71,0,0);
+  transform: matrix(.71,.71,-.71,.71,0,0);
+  position: absolute;
+  top: 50%;
+  right: 0rpx;
+  margin-top: -8rpx;
+}
+.auth-btn{
+  margin:0 0 0 20rpx;
+  height:68rpx;
+  line-height:68rpx;
+  border-radius: 34rpx;
+  align-self: center;
+  font-size:28rpx;
+  color:#333;
+}
+.auth-btn:after{
+  border:none;
+}

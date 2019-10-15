@@ -1,0 +1,4 @@
+<view class="img-view img-class" style="width:{{width}};height:{{height}};border-radius:{{isCircle?isCircle:'0'}}">
+  <image mode="aspectFill" src="{{defaultImg}}" class="img-def" hidden="{{isLoad}}" style="width:{{width}};height:{{height}};"></image>
+  <image mode="aspectFill" bindtap="prewImg" bindload='_imgLoad' lazy-load='{{lazyLoad}}' src="{{loadImg}}" class="img-def  opacity {{isLoad?'show-img':''}}" style="width:{{width}};height:{{height}};border-radius:{{isCircle?isCircle:'0'}}"></image>
+</view>

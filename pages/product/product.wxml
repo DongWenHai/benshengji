@@ -1,0 +1,59 @@
+
+<view class="product">
+  <!-- 头部搜索 -->
+  <view class="pros_all">
+    <view class="pros_top">
+      <view class="pros_top_left">
+        <image src="/images/icon-product1.png" bindtap="searchByKeyword" class="pros_top_left_img"></image>
+        <input type="text" placeholder="请输入搜索关键词" maxlength="30" placeholder-class="place-holder" class="pros_top_left_inp" bindinput="setKeyword" value="{{keyword}}" bindconfirm="searchByKeyword"></input>
+      </view>
+      <view class="pros_top_right" bindtap="showCatCard">
+        <image src="/images/icon-product2.png" class="pros_top_right_img"></image>
+        <view class="pros_top_right_sort">分类</view>
+      </view>
+    </view>
+    <!-- 选项 -->
+    <view class="pros_selects">
+      <view class='{{num==1?"active":""}}' data-num='1' bindtap="setCondition">推荐</view>
+      <view class='{{num==2?"active":""}}' data-num='2' bindtap="setCondition">销量</view>
+      <view class="pros_selects_one" data-num='3' bindtap="setCondition">
+        <text class='{{num==3?"active":""}}'>价格</text>
+        <image src="/images/icon-product3.png" class="pros_selects_img"></image>
+      </view>
+      <view class="pros_selects_one" data-num='4' bindtap="setCondition">
+        <text class='{{num==4?"active":""}}'>筛选</text>
+        <image src="/images/icon-product4.png" class="pros_selects_img"></image>
+      </view>
+    </view>
+  </view>
+  <!-- 产品 -->
+  <view class="products" wx:if="{{products.length}}">
+
+    <navigator class="pro_one_by_one" wx:for="{{products}}" wx:key="index" hover-class="none" url="/pages/goods/index?pid={{item.product_id}}">
+      <i-img width="340rpx" height="340rpx" loadImg="{{item.product_thumb_img}}"></i-img>
+      <view class="products_des">
+        <view class="products_name">{{item.product_name}}</view>
+        <view class="product_do">{{item.productKey}}</view>
+        <view class="products_about_price">
+          <view class="product_about_price">
+            <view class="product_real_price">¥{{item.product_price}}</view>
+            <view class="product_no_price">¥{{item.product_fake_price}}</view>
+          </view>
+          <image src="../../images/icon-product5.png" class="product_price_add" data-pid="{{item.product_id}}" catchtap="showShopEvt"></image>
+        </view>
+      </view>
+    </navigator>
+
+  </view>
+
+  <view class="no-data" wx:else>
+    <image src="/images/noData.png"></image>
+    <view>暂无数据</view>
+  </view>
+</view>
+<!-- 购买面板 -->
+<i-shop show="{{showShop}}" bind:close="closeShop" product="{{productShop}}"></i-shop>
+<!-- 分类面板 -->
+<i-cat show="{{showCat}}" cid="{{category_id}}" bind:hidden="hideCat" bind:setcid="setCatId"></i-cat>
+<!-- 筛选面板 -->
+<i-screen show="{{showScreen}}" moneyMin="{{s_money}}" moneyMax="{{e_money}}" bind:hidden="hideScreen" bind:confirm="setPriceScreen"></i-screen>

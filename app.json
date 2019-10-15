@@ -1,0 +1,64 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/product/product",
+    "pages/show/show",
+    "pages/car/car",
+    "pages/user/user",
+    "pages/address/address",
+    "pages/member/member",
+    "pages/user/info",
+    "pages/settlement/settlement",
+    "pages/payResult/payResult",
+    "pages/goods/index",
+    "pages/order/index",
+    "pages/order/detail",
+    "pages/order/refund",
+    "pages/show/detail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "本生吉",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/home_g.png",
+        "selectedIconPath": "images/home.png"
+      },
+      {
+        "pagePath": "pages/product/product",
+        "text": "产品",
+        "iconPath": "images/product_g.png",
+        "selectedIconPath": "images/product.png"
+      },
+      {
+        "pagePath": "pages/show/show",
+        "text": "买家秀",
+        "iconPath": "images/show_g.png",
+        "selectedIconPath": "images/show.png"
+      },
+      {
+        "pagePath": "pages/car/car",
+        "text": "购物车",
+        "iconPath": "images/car_g.png",
+        "selectedIconPath": "images/car.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "images/user_g.png",
+        "selectedIconPath": "images/user.png"
+      }
+    ],
+    "color": "#999999",
+    "selectedColor": "#258985",
+    "backgroundColor": "#fff",
+    "borderStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json"
+}

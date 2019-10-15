@@ -1,0 +1,12 @@
+<view class="order-controls">
+  <view class="order-controls-l">
+    <view wx:if="{{order.is_collage==1}}">团单状态:<block wx:if="{{order.collageStatus==1}}">待成团</block><block wx:elif="{{order.collageStatus==2}}">拼团失败</block><block wx:else>拼团成功</block></view>
+  </view>
+  <view class="order-controls-btns">
+    <view class="controls-btn" wx:if="{{orderStatus==0||orderStatus==6||orderStatus==-2||orderStatus==5}}" catchtap="del">删除订单</view>
+    <view class="controls-btn" wx:if="{{orderStatus==1}}" catchtap='cancle'>取消订单</view>
+    <view class="controls-btn" wx:if="{{orderStatus==1}}" catchtap='pay'>继续支付</view>
+    <view class="controls-btn" wx:if="{{orderStatus==4}}" catchtap='viewLogistics'>查看物流</view>
+    <view class="controls-btn" wx:if="{{orderStatus==4}}" catchtap="accept">确认收货</view>
+  </view>
+</view>

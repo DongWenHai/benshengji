@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "产品列表",
+  "usingComponents": {
+    "i-img":"/components/img/img",
+    "i-shop":"/components/shop/shop",
+    "i-cat":"./cat",
+    "i-screen":"./screen"
+  }
+}

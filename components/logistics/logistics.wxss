@@ -1,0 +1,93 @@
+.logistics{
+  width:100%;
+  height:100%;
+  position:fixed;
+  top:0;
+  left:0;
+  z-index:99;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mask{
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.7);
+  position:absolute;
+  top:0;
+  left:0;
+}
+.logistics-container{
+  width:640rpx;
+  border-radius:16rpx;
+  background:#fff;
+  position:relative;
+}
+.logistics-title{
+  padding-top:30rpx;
+  text-align: center;
+  font-size:28rpx;
+  color:#333;
+}
+.logistics-info{
+  padding:0 30rpx;
+  box-sizing: border-box;
+  margin-top:30rpx;
+  border-bottom:1px dashed #efefef;
+  padding-bottom:20rpx;
+}
+.logistics-id,.logistics-store{
+  color:#999;
+  font-size:26rpx;
+  margin-top:10rpx;
+}
+.logistics-travel{
+  width:100%;
+  height:700rpx;
+  padding:20rpx 30rpx;
+  box-sizing: border-box;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+.logistics-travel::-webkit-scrollbar{
+  width:0;
+  height:0;
+  background:transparent;
+  border: none;
+}
+.logistics-travel-item{
+  display:flex;
+  padding-bottom:16rpx;
+  position:relative;
+}
+.logistics-travel-item:after{
+  content:'';
+  display:block;
+  width:548rpx;
+  height:0;
+  border-bottom:1px dashed #efefef;
+  position:absolute;
+  bottom:0;
+  right:0;
+}
+.logistics-sign{
+  width:12rpx;
+  height: 12rpx;
+  border-radius:50%;
+  background:#25ee0c;
+  margin-right:20rpx;
+  margin-top:10rpx;
+}
+.logistics-detail{
+  flex:1;
+}
+.logistics-time{
+  font-size:24rpx;
+  color:#999;
+  line-height:32rpx;
+  margin-bottom:8rpx;
+}
+.logistics-content{
+  font-size:24rpx;
+  color:#333;
+}

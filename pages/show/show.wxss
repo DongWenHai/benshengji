@@ -1,0 +1,18 @@
+.show-container{
+  padding:40rpx 26rpx;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap:wrap;
+}
+.show-item{
+  width:340rpx;
+  height:462rpx;
+  border:1px solid #c1c1c1;
+  box-sizing: border-box;
+  margin-bottom:20rpx;
+}
+.show-item:nth-child(3n){
+  width:700rpx;
+  height:525rpx;
+}

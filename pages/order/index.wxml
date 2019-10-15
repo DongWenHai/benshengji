@@ -1,0 +1,34 @@
+
+<i-tab-view bind:bottomReached="bottomReached" bind:swiperChange="tabIndexChange" currentTabIndex="{{currentTabIndex}}" fontcolor="#258985" linecolor="#258985" navList="{{navList}}">
+
+    <view slot="{{'pageViewSlot'+index}}" wx:for="{{navList}}" wx:key="{{ index }}">
+      <block wx:if="{{contentList[index].length!==0}}">
+          <view class="card" wx:for="{{contentList[index]}}" wx:key="{{ index }}">
+            <i-order-card orderid="{{item.orderid}}">
+              <navigator class="goods-container" slot="goods" url="/pages/order/detail?orderid={{item.orderid}}">
+                <view class="goods-item" wx:for="{{item.imgs}}" wx:key="index" wx:for-item="pItem">
+                  <i-img width="120rpx" height="120rpx" isCircle="8rpx" loadImg="{{pItem.imgs}}"></i-img>
+                  <view class="goods-info">
+                    <view class="goods-name">{{pItem.product_name}}</view>
+                    <view class="goods-price">￥{{pItem.product_price}}</view>
+                  </view>
+                  <view class="goods-attr">
+                    {{pItem.product_attr_name}}*{{pItem.product_count}}
+                  </view>
+                </view>
+              </navigator>
+              <view slot="controls">
+                <i-order-controls order="{{item}}" data-products="{{item.imgs}}" data-orderid="{{item.orderid}}" data-index="{{index}}"  orderStatus="{{item.order_status}}" bind:pay="orderPay" bind:cancle="orderCancle" bind:del="orderDel" bind:accept="orderAccept" bind:refund="orderRefund" bind:logistics="viewLogistics"></i-order-controls>
+              </view>
+            </i-order-card>
+          </view>
+      </block>
+      <view class="empty-wrap" wx:else>
+          <image class="empty-img" src="/images/noData.png"></image>
+          <view class="empty-txt">暂无任何订单记录～</view>
+      </view>
+    </view>
+
+</i-tab-view>
+
+<i-logistics show="{{showLogistics}}" logistics="{{logistics}}" bind:close="closeLogistics"></i-logistics>

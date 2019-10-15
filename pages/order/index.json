@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "我的订单",
+  "usingComponents": {
+    "i-tab-view":"/components/tab-view/tab-view",
+    "i-order-card":"/components/order-card/order-card",
+    "i-img":"/components/img/img",
+    "i-order-controls":"/components/order-controls/order-controls",
+    "i-logistics":"/components/logistics/logistics"
+  }
+}

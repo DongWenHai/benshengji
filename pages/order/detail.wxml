@@ -1,0 +1,80 @@
+<view class="order-status">
+  <view class="order-status-icon"><image src="/images/icon-order-status.png"></image></view>
+  <view class="order-status-content">
+    <view class="order-status-txt">
+      <text wx:if="{{order.order_status=='-2'}}">已退款</text>
+      <text wx:if="{{order.order_status=='-1'}}">退款中</text>
+      <text wx:if="{{order.order_status=='0'}}">订单取消</text>
+      <text wx:if="{{order.order_status=='1'}}">待支付</text>
+      <text wx:if="{{order.order_status=='3'}}">待发货</text>
+      <text wx:if="{{order.order_status=='4'}}">待收货</text>
+      <text wx:if="{{order.order_status=='6'}}">已完成</text>
+    </view>
+    <view class="order-status-deliver" wx:if="{{order.order_status=='4'||order.order_status=='6'}}">
+      <view class="order-deliver-new">物流</view>
+      <view>查看物流</view>
+    </view>
+  </view>
+</view>
+
+<view class="order-ship">
+  <view class="order-ship-icon"><image src="/images/icon-order-address.png"></image></view>
+  <view class="order-ship-content">
+    <view class="order-ship-user">
+      <view class="order-ship-name">收件人:{{order.ship_name}}</view>
+      <view class="order-ship-phone">{{order.ship_phone}}</view>
+    </view>
+    <view class="order-ship-address">{{order.ship_province}}{{order.ship_city}}{{order.ship_area}}{{order.town}}</view>
+  </view>
+</view>
+
+<view class="order-products">
+
+  <view class="order-products-list">
+    <view class="order-products-item" wx:for="{{products}}" wx:key="index">
+      <i-img width="106rpx" height="106rpx" isCircle="8rpx" imgClass="product-img" loadImg="{{item.product_img}}"></i-img>
+      <view class="product-info">
+        <view class="product-info-box">
+          <view class="product-name">{{item.product_name}}</view>
+          <view class="product-price">￥{{item.product_price}}</view>
+        </view>
+        <view class="product-count">×{{item.product_count}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="product-total">
+    <view class="product-total-item">
+      <view class="product-total-label">商品总价</view>
+      <view class="product-total-value">￥{{order.total_money}}</view>
+    </view>
+    <view class="product-total-item">
+      <view class="product-total-label">运费</view>
+      <view class="product-total-value">￥{{order.ship_fee}}</view>
+    </view>
+    <view class="product-total-item" wx:if="{{order.second_two_money_activity>0}}">
+      <view class="product-total-label">活动加购费</view>
+      <view class="product-total-value">￥{{order.second_two_money_activity}}</view>
+    </view>
+    <view class="product-total-item" wx:if="{{order.privilege_gold>0}}">
+      <view class="product-total-label">特权金</view>
+      <view class="product-total-value">￥{{order.privilege_gold}}</view>
+    </view>
+    <view class="product-total-item">
+      <view class="product-total-label">优惠</view>
+      <view class="product-total-value">-￥{{order.vipCouponMoney}}</view>
+    </view>
+  </view>
+
+</view>
+
+<view class="order-info">
+  <view class="order-info-item">订单编号:{{order.orderid}}<view class="order-num-copy">复制</view> </view>
+  <view class="order-info-item">下单时间:{{order.add_time}}</view>
+</view>
+
+<view class="order-footer">
+  <view class="order-btn" wx:if="{{order.order_status=='1'}}" data-orderid="{{order.orderid}}" bindtap="orderCancle">取消订单</view>
+  <view class="order-btn" wx:if="{{order.order_status=='1'}}" data-orderid="{{order.orderid}}" bindtap="orderPay">立即付款</view>
+
+  <view class="order-btn" wx:if="{{order.order_status=='4'}}" data-orderid="{{order.orderid}}">立即收货</view>
+</view>

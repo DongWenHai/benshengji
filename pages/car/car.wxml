@@ -1,0 +1,30 @@
+
+<block wx:if="{{cartData.length}}">
+  <view class="cart-man">
+    <view class="store-name"><image bindtap="checkedAll" class="checked-all" src="/images/select{{allChecked?'ed':''}}.png"></image>本木吉</view>
+    <view class="man-btn" wx:if="{{mode==='nomal'}}" bindtap="toggleMode">管理</view>
+    <view class="man-btn" wx:if="{{mode==='management'}}" bindtap="toggleMode">完成</view>
+  </view>
+
+  <!-- 购物车列表 -->
+  <view class='cart-view'>
+    <block wx:for="{{cartData}}" wx:key="{{index}}">
+    <i-cart-item content="{{item}}" checked="{{item.select_status=='1'}}" data-id="{{item.product_id}}" data-index="{{index}}" bind:check="checkItem" bind:change="changeNumber"></i-cart-item>
+    </block>
+  </view>
+
+  <view class="cart-tabbar">
+    <view class="cart-cal">
+      <view class="cart-total">总计: <text style="font-weight:bold;">￥{{total}}</text></view>
+    </view>
+    <view class="cart-settlement {{total>0?'':'unsettlement'}}"  wx:if="{{mode==='nomal'}}" bindtap='balance'>结算</view>
+    <view class="cart-settlement" wx:if="{{mode==='management'}}" bindtap="deleteEvent">删除</view>
+  </view>
+</block>
+
+<block wx:else>
+  <view class='nocart'>
+    <image class='nocart-img' src="/images/gouwuche.png"></image>
+    <view class='nocart-item'>购物车空空如也～</view>
+  </view>
+</block>

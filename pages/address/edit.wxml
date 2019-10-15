@@ -1,0 +1,52 @@
+<!--pages/address/edit.wxml-->
+<view class="addaddress">
+
+  <view class="bg_white">
+    <view class="weui-cell weui-cell_access">
+      <view class="weui-cell__hd f16 label-txt">姓名：</view>
+      <view class="weui-cell__bd f15">
+        <input class="weui-input" type="text" placeholder="请输入收货人姓名" value="{{formData.name_val}}" bindinput='setName'></input>
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_access">
+      <view class="weui-cell__hd f16 label-txt">电话：</view>
+      <view class="weui-cell__bd f15">
+        <input class="weui-input" type="text" placeholder="请输入手机号" value="{{formData.phone_val}}" bindinput='setPhone'></input>
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_access">
+      <view class="weui-cell__hd f16 label-txt">地区：</view>
+      <view class="weui-cell__bd f15 cl_b6">
+        <picker mode="region" bindchange="bindRegionChange" value="{{region}}" class='weui-input'>
+          <view class="picker">
+            {{region[0]}}，{{region[1]}}，{{region[2]}}
+          </view>
+        </picker>
+      </view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </view>
+    <view class="weui-cell weui-cell_access">
+      <view class="weui-cell__hd f16 label-txt">详细地址：</view>
+      <view class="weui-cell__bd f15">
+        <input class="weui-input" type="text" placeholder="楼号/楼层/房号/门牌号" value="{{formData.address_val}}" bindinput='setAddress'></input>
+      </view>
+      <view class="weui-cell__ft">
+        <text class="iconfont icon-icondz" style="margin-right:10rpx;font-size:42rpx;"></text>
+      </view>
+    </view>
+    <view class="weui-cell" data-id="{{formData.address_id}}" bindtap="setDefaultAddress">
+      <view class="weui-cell__hd hm-flex hm-flex-align-center">
+        <image wx:if="{{formData.select_status==0}}" class="address-select" src="/images/select.png"></image>
+        <image wx:if="{{formData.select_status==1}}" class="address-select" src="/images/selected.png"></image>
+      </view>
+      <view class="weui-cell__bd">默认收货地址</view>
+    </view>
+  </view>
+
+  <view class="hasTabs"></view>
+  <view class="footerTabs" style="background:transparent;">
+    <view class="ph">
+      <view class="t-btn" bindtap='submitData'>确认修改</view>
+    </view>
+  </view>
+</view>

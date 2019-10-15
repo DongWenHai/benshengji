@@ -1,0 +1,25 @@
+.order-controls{
+  padding:16rpx 24rpx;
+  box-sizing: border-box;
+  display:flex;
+  align-items: center;
+}
+.order-controls-l{
+  font-size:26rpx;
+  color:#999;
+}
+.order-controls-btns{
+  flex:1;
+  display:flex;
+  justify-content: flex-end;
+}
+.controls-btn{
+  padding:0 26rpx;
+  height:60rpx;
+  line-height:60rpx;
+  border:1px solid #F7A600;
+  border-radius:8rpx;
+  color:#F7A600;
+  font-size:26rpx;
+  margin-left:20rpx;
+}

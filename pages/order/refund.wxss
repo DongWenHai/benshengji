@@ -1,0 +1,120 @@
+.refund-lists{
+  background:#fff;
+}
+.refund-lists-item{
+  border-top:1px solid #EEEEEE;
+  padding:20rpx 30rpx;
+  box-sizing: border-box;
+  display:flex;
+  align-items: center;
+}
+.refund-product-info{
+  padding-left:20rpx;
+  flex:1;
+  align-self: stretch;
+  display:flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.refund-product-name{
+  font-size:28rpx;
+  color:#333;
+}
+.refund-product-price{
+  font-size:26rpx;
+  color:#999;
+}
+.refund-product-count{
+  font-size:26rpx;
+  color:#666;
+  white-space: nowrap;
+}
+.form-card{
+  width:690rpx;
+  background:#fff;
+  border-radius:24rpx;
+  padding:0 20rpx 30rpx;
+  box-sizing: border-box;
+  margin:20rpx auto 0;
+}
+.form-card-tab{
+  padding:28rpx 0;
+  display: flex;
+}
+.form-card-tab-item{
+  flex:1;
+  text-align: center;
+  font-size:28rpx;
+  color:#999;
+  line-height:40rpx;
+  position:relative;
+}
+.form-card-tab-item.active{
+  font-weight:bold;
+  color:#333;
+}
+.form-card-tab-item.active:after{
+  content:'';
+  display:block;
+  width:20rpx;
+  height:6rpx;
+  border-radius:3rpx;
+  background:#AB7ED1;
+  position:absolute;
+  bottom:-20rpx;
+  left:50%;
+  transform: translateX(-50%);
+}
+.form-card-item{
+  padding:30rpx 0rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom:1px solid #EEEEEE;
+}
+.form-card-label{
+  font-size:28rpx;
+  line-height:40rpx;
+}
+.form-card-reason{
+  flex:1;
+  position:relative;
+  padding-right:40rpx;
+  text-align: right;
+}
+.form-card-reason:after{
+    content: " ";
+    display: inline-block;
+    height: 8px;
+    width: 8px;
+    border-width: 0 1px 1px 0;
+    border-color: #999;
+    border-style: solid;
+    -webkit-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+    transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+    position: absolute;
+    top: 50%;
+    margin-top: -5px;
+    right: 2px;
+}
+.reason-placeholder{
+  font-size:28rpx;
+  color:#999;
+}
+.form-card-explain{
+  flex:1;
+  font-size:28rpx;
+  text-align: right;
+}
+.refund-confirm{
+  width:280rpx;
+  height:84rpx;
+  border-radius:42rpx;
+  border:1px solid #AB7ED1;
+  text-align: center;
+  line-height:84rpx;
+  color:#AB7ED1;
+  font-size:32rpx;
+  letter-spacing: 1px;
+  margin:90rpx auto 0;
+}

@@ -1,0 +1,107 @@
+<import src="../../wxParse/wxParse.wxml" />
+<view wx:if="{{loadsuccess===1}}">
+  <view class="swiper-container" wx:if="{{banner.length}}">
+    <swiper class='u-wrp-bnr' autoplay='true' interval='5000' current="{{swiperCurrent}}" bindchange="swiperChange">
+      <swiper-item wx:for="{{banner}}" wx:key="index">
+        <i-img width="100%" height="100%" loadImg="{{item.image_url}}" canPreview="{{true}}" imgGroup="{{banner}}"></i-img>
+      </swiper-item>
+    </swiper>
+    <view class="swiper-player">
+      {{swiperCurrent+1}}/{{banner.length}}
+    </view>
+  </view>
+  <view class="pro_top">
+    <view class="pro_name">{{product.product_name}}</view>
+    <view class="pro_iniv">
+      <image src="/images/pro1.png" class="pro_to_iniv"></image>
+      <view class="pro_iniv_your">分享</view>
+    </view>
+  </view>
+  <view class="pro_top_bottom">
+    <view class="pro_top_bottom_xs">销售价
+      <text class="pro_flow">¥</text>
+      <text class="pro_bot_price">{{product.product_price_arr[0]}}</text>
+      <text class="pro_flow">.{{product.product_price_arr[1]}}</text>
+    </view>
+    <view class="pro_sell">已售 {{product.product_sale}}件</view>
+  </view>
+  <!-- 配送 -->
+  <view class="pro_service">
+    <view>
+      <view>配送</view>
+      <view class="pro_this_ser" wx:if="{{product.is_platform_ship=='1'}}">
+        <image src="/images/icon-proDes2.png"></image>
+        <text>商家配送</text>
+      </view>
+      <view class="pro_this_ser pro_this_ser1" wx:if="{{product.is_self_get=='1'}}">
+        <image src="/images/icon-proDes2.png"></image>
+        <text>到店服务</text>
+      </view>
+    </view>
+    <image src="/images/icon-proDes1.png"></image>
+  </view>
+  <!-- 选择 -->
+  <view class="proNum_selt" bindtap="showShopEvt">
+    <view>
+      <text class="proDes_selt">已选</text>
+      <text>{{count}}件</text>
+    </view>
+    <image src="/images/icon-proDes1.png"></image>
+  </view>
+  <!-- 店铺 -->
+  <view class="shop_des">
+    <view class="shop_des_top">
+      <image src="/images/show.png"></image>
+      <view class="shop_des_right">
+        <view class="shop_name">微商城</view>
+        <view class="shop_proof">
+          <image src="/images/icon-proDes3.png"></image>
+          <text>小程序认证</text>
+        </view>
+      </view>
+    </view>
+    <view class="shop_des_bot">
+      <navigator class="shop-navigator" open-type="switchTab" url="/pages/product/product">
+        <image src="/images/icon-proDes4.png"></image>
+        <text>全部商品</text>
+      </navigator>
+      <navigator class="shop-navigator" open-type="switchTab" url="/pages/index/index">
+        <image src="/images/icon-proDes5.png" class="shop_des_bot_img"></image>
+        <text>进入店铺</text>
+      </navigator>
+    </view>
+  </view>
+  <!-- 图文详情 -->
+  <!-- <view class="wxParse">
+    <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+  </view>  -->
+  <view class="shop_cart">
+    <view class="shops_all_do">
+      <navigator class="shop_alls" open-type="switchTab" url="/pages/user/user">
+        <image src="/images/icon-proDes6.png"></image>
+        <view class="shop_nav-txt">我的</view>
+      </navigator>
+      <navigator class="shop_alls" open-type="switchTab" url="/pages/car/car">
+        <image src="/images/icon-proDes7.png"></image>
+        <view class="shop_nav-txt">购物车</view>
+        <view class="cart_num" wx:if="{{cart_num}}">{{cart_num}}</view>
+      </navigator>
+      <navigator class="shop_alls" open-type="switchTab" url="/pages/index/index">
+        <image src="/images/icon-proDes8.png"></image>
+        <view class="shop_nav-txt">店铺</view>
+      </navigator>
+    </view>
+    <block wx:if="{{product.product_stock>0}}">
+      <view class="now_pay now_pay1" bindtap="showShopEvt">加入购物车</view>
+      <view class="now_pay now_pay2" bindtap="showShopEvt">立即购买</view>
+    </block>
+    <view class="now_pay nostock" wx:else>商品售罄</view>
+  </view>
+</view>
+
+<view class="when-err" wx:elif="{{loadsuccess===2}}">
+  <image src="/images/no-product.png"></image>
+  <view>{{reqMsg}}</view>
+</view>
+
+<i-shop show="{{showShop}}" bind:close="closeShop" product="{{product}}" num="{{count}}"></i-shop>

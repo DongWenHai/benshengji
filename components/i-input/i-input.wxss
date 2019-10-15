@@ -1,0 +1,9 @@
+.i-input-number{color:#495060;display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center;position:relative}
+.i-input-number view{width:48rpx;height:48rpx;display:inline-block;vertical-align:middle}
+.i-input-number view image{width:48rpx;height:48rpx;vertical-align:top;}
+.i-input-number-minus{border-right:none;border-radius:8rpx 0 0 8rpx;background:rgba(247,248,250,1);position:relative;}
+.i-input-number-minus:after{content:'';display:block;width:18rpx;height:4rpx;background:#d8d8d8;position:absolute;top:22rpx;left:15rpx;}
+.i-input-number-plus{border-left:none;border-radius:0 8rpx 8rpx 0;background:rgba(243,244,246,1);position:relative;}
+.i-input-number-plus:before{content:'';display:block;width:18rpx;height:4rpx;background:#353637;position:absolute;top:22rpx;left:15rpx;}
+.i-input-number-plus:after{content:'';display:block;height:18rpx;width:4rpx;background:#353637;position:absolute;left:22rpx;top:15rpx;}
+.i-input-number .i-input-number-text{text-align:center;height:48rpx;width:70rpx;font-size:24rpx;line-height:48rpx;background:rgba(244,245,247,1);margin:0 4rpx;}

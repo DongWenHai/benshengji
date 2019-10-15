@@ -1,0 +1,25 @@
+<view>
+  <i-img width="750rpx" height="750rpx" loadImg="{{showData.image}}"></i-img>
+  <!-- 评价 -->
+  <view class="about_show">
+    <view>
+      <view class="show_user">
+        <view class="show_user_all">
+          <i-img width="50rpx" height="50rpx" loadImg="{{showData.avatarUrl}}"></i-img>
+          <text class="show_user_name">{{showData.nickName}}</text>
+        </view>
+        <image src="/images/icon-show-des1.png" class="show_hide"></image>
+      </view>
+      <view class="show_pros_best">{{showData.content}}</view>
+    </view>
+    <!-- 商品 -->
+    <navigator class="show_this_product" hover-class="none" url="/pages/goods/index?pid={{showData.product_id}}">
+      <i-img width="206rpx" height="206rpx" loadImg="{{showData.product_img}}"></i-img>
+      <view class="show_this_product_des">
+        <view class="btn_look">点击查看</view>
+        <view class="show_this_product_name">{{showData.product_name}}</view>
+        <view class="show_this_product_price">零售价￥{{showData.product_price}}</view>
+      </view>
+    </navigator>
+  </view>
+</view>

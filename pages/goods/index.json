@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "商品详情页",
+  "usingComponents": {
+    "i-img":"/components/img/img",
+    "i-shop":"/components/shop/shop"
+  }
+}

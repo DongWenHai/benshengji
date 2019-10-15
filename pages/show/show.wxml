@@ -1,0 +1,5 @@
+<view class="show-container">
+  <navigator class="show-item" hover-class="none" wx:for="{{shows}}" wx:key="index" url="/pages/show/detail?id={{item.id}}">
+    <i-img width="100%" height="100%" loadImg="{{item.image}}"></i-img>
+  </navigator>
+</view>

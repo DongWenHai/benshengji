@@ -1,0 +1,130 @@
+page{
+  border-top:1px solid #CCCCCC;
+  padding-bottom:70px;
+  box-sizing: border-box;
+}
+.address-item{
+  width:100%;
+  background:#fff;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+  border-bottom: 20rpx solid #F3F3F3;
+}
+.address-ship{
+  border-bottom:1px solid #EEEEEE;
+}
+.address-userinfo{
+  display:flex;
+  align-items: center;
+  padding:16rpx 0 20rpx;
+}
+.ship-name{
+  font-size:32rpx;
+  letter-spacing: 1px;
+  margin-right:40rpx;
+}
+.ship-phone{
+  font-size:32rpx;
+  letter-spacing: 1px;
+}
+.address-detail{
+  font-size:28rpx;
+  color:#999;
+  line-height:40rpx;
+  padding-bottom:20rpx;
+}
+.address-controls{
+  height:80rpx;
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.address-select{
+  display:flex;
+  align-items: center;
+}
+.address-select>image{
+  width:30rpx;
+  height:30rpx;
+  margin-right:10rpx;
+}
+.address-select>view{
+  font-size:28rpx;
+  color:#258985;
+}
+.address-btns{
+  display:flex;
+  align-items: center;
+}
+.address-btns>view{
+  font-size:28rpx;
+  color:#999;
+  margin-left:20rpx;
+}
+
+.noaddress{
+  width: calc(100% - 60rpx);
+  text-align: center;
+  color: #999999;
+  font-size: 28rpx;
+  padding: 0 30rpx;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+
+}
+
+.noaddress-img{
+  width: 300rpx;
+  height: 300rpx;
+}
+
+.noaddress-item{
+  margin: 35rpx 0;
+}
+
+.noaddress-btn{
+  height: 100rpx;
+  color: #FFFFFF;
+  font-size: 32rpx;
+  line-height: 100rpx;
+  margin-top: 20rpx;
+  background: #DD137B;
+  border-radius:24rpx;
+}
+
+.footerTabs{
+  width:100%;
+  height:60px;
+  background:#fff;
+  position:fixed;
+  bottom:0;
+  left:0;
+  z-index:999;
+  background:#fff;
+}
+.ph{
+  padding:0 15px;
+}
+
+.mt20{
+  margin-top: 20rpx!important;
+}
+
+.t-btn{
+  width:100%;
+  height:90rpx;
+  line-height:90rpx;
+  text-align: center;
+  color:#fff;
+  background:#258985;
+  margin:0 auto;
+  border-radius:8rpx;
+}
+.bywx{
+  background:#fff;
+  border:1px solid #258985;
+  box-sizing: border-box;
+  color:#258985;
+}

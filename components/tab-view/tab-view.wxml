@@ -1,0 +1,17 @@
+<view class="nav-bar i-class">
+    <view class="nav-bar-inner">
+        <view bindtap="tabClick" class="nav-bar-item {{currentTabIndex==index?'current':''}}" data-current="{{index}}" style="color: {{currentTabIndex==index?backgroundColor:''}}" wx:for="{{navList}}" wx:key="{{ iem }}">
+            {{item.name}}
+        </view>
+    </view>
+    <view class="tab-bar-btm-line-wrap" style="top: {{tabBarHeight-3}}px">
+        <view animation="{{animationData}}" class="tab-bar-btm-line" style="height: 3px; margin-left: {{marginLeft}}px;background:{{linecolor}}"></view>
+    </view>
+</view>
+<swiper bindchange="swiperChange" current="{{currentTabIndex}}" duration="500" style="height: {{windowHeight}}px; margin-top: {{contenListMarginTop}}px">
+    <swiper-item wx:for="{{navList}}" wx:for-index="pageIndex" wx:key="{{ pageIndex }}">
+        <scroll-view scrollY bindscrolltolower="scrollToBottom" style="height: {{windowHeight}}px; width: 100%;">
+            <slot name="{{'pageViewSlot'+pageIndex}}"></slot>
+        </scroll-view>
+    </swiper-item>
+</swiper>

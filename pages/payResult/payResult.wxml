@@ -1,0 +1,8 @@
+<view class="pay-result">
+  <icon class="type-icon" type="success" size="90" color="#258985"></icon>
+  <view class="pay-status">支付成功</view>
+  <view class="opa-btns">
+    <view class="nav-home">回到首页</view>
+    <view class="nav-order">查看订单</view>
+  </view>
+</view>

@@ -1,0 +1,23 @@
+.order-card{
+  width:690rpx;
+  background:#fff;
+  border-radius:8rpx;
+  margin:0 auto 20rpx;
+}
+.order-title{
+  height:60rpx;
+  padding:0 24rpx;
+  box-sizing: border-box;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom:1px solid #EEEEEE;
+}
+.order-id{
+  font-size:26rpx;
+  color:#999;
+}
+.order-goods{
+  border-bottom:1px solid #EEEEEE;
+  padding:18rpx 0;
+}

@@ -1,0 +1,39 @@
+<block wx:if="{{addressList.length}}">
+  <view class="address" wx:for="{{addressList}}" wx:key="{{index}}" data-item="{{item}}" bindtap='selectAddressToOrder'>
+    <view class="address-item">
+      <view class="address-ship">
+        <view class="address-userinfo">
+          <view class="ship-name">{{item.name}}</view>
+          <view class="ship-phone">{{item.phone}}</view>
+        </view>
+        <view class="address-detail">
+         {{item.province}}{{item.city}}{{item.area}}{{item.address_detail}}
+        </view>
+      </view>
+      <view class="address-controls">
+        <view class="address-select" data-id="{{item.address_id}}" data-index="{{index}}" catchtap="setDefaultAddress">
+          <image wx:if="{{item.select_status==0}}" src="/images/select.png" data-index='{{index}}'></image>
+          <image wx:if="{{item.select_status==1}}" src="/images/selected.png" data-index='{{index}}'></image>
+          <view data-address_id="{{item.address_id}}">默认地址</view>
+        </view>
+        <view class="address-btns">
+          <view data-index="{{index}}" catchtap='editAdress'>编辑</view>
+          <view data-id="{{item.address_id}}" data-index="{{index}}" catchtap='delAdress'>删除</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="footerTabs" style="background:transparent;">
+  <view class="ph">
+    <navigator url="/pages/address/add?from={{fromOrder}}"  class='t-btn'>继续添加</navigator>
+  </view>
+</view>
+</block>
+
+<block wx:else>
+  <view class='noaddress'>
+    <view class='noaddress-item'>还没添加收货地址哟～</view>
+    <navigator url="/pages/address/add"  class='t-btn mt20'>添加地址</navigator>
+    <view class='t-btn mt20 bywx' bindtap='getWxAddress'>获取微信地址</view>
+  </view>
+</block>

@@ -1,0 +1,20 @@
+<view class="info">
+
+  <view class="info-flex">
+    <view class="info-label">昵称</view>
+    <view class="info-val">{{userData.nickName}}</view>
+  </view>
+  <view class="info-flex">
+    <view class="info-label">电话</view>
+    <view class="info-val">{{userData.phone?userData.phone:'暂无电话'}}</view>
+  </view>
+  <view class="info-flex">
+    <view class="info-label">地区</view>
+    <view class="info-val">{{userData.province}}{{userData.city}}</view>
+  </view>
+  <view class="info-flex">
+    <view class="info-label">生日</view>
+    <view class="info-val"></view>
+  </view>
+
+</view>

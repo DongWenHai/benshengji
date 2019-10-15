@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "买家秀",
+  "usingComponents": {
+    "i-img":"/components/img/img"
+  }
+}

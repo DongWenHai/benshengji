@@ -1,0 +1,84 @@
+<view class="user">
+  <view class="user-card">
+    <view class="user-info">
+      <i-img imgClass="user-avater" width="120rpx" height="120rpx" isCircle="50%" loadImg="{{userInfo.avatarUrl}}"></i-img>
+      <view class="user-info-co" wx:if="{{!needAuth}}">
+        <navigator class="user-name" hover-class="none" url="/pages/user/info">{{userInfo.nickName}}</navigator>
+        <view class="user-level">等级划分</view>
+      </view>
+      <button wx:else class="auth-btn" open-type="getUserInfo" bindgetuserinfo="getUserInfoAuth">立即登录</button>
+    </view>
+    <view class="user-data">
+      <view class="user-data-item">
+        <view class="user-data-value">0.00</view>
+        <view class="user-data-name">余额</view>
+      </view>
+      <view class="user-data-item">
+        <view class="user-data-value">0</view>
+        <view class="user-data-name">积分</view>
+      </view>
+      <view class="user-data-item">
+        <view class="user-data-value">1<text class="unit">张</text></view>
+        <view class="user-data-name">优惠券</view>
+      </view>
+    </view>
+  </view>
+  <view class="user-order">
+    <view class="user-order-header">
+      <image class="user-order-header-icon" src="/images/icon-user-order-header.png"></image>
+      <view class="user-order-header-bd">我的订单</view>
+      <navigator class="user-order-header-ft" hover-class="none" url="/pages/order/index?currentIndex=0">查看全部订单</navigator>
+    </view>
+    <view class="user-orders">
+      <navigator class="user-order-item" hover-class="none" url="/pages/order/index?currentIndex=1">
+        <image class="user-order-icon" src="/images/icon-user-order-1.png"></image>
+        <view class="user-order-name">待付款</view>
+      </navigator>
+       <navigator class="user-order-item" hover-class="none" url="/pages/order/index?currentIndex=2">
+        <image class="user-order-icon" src="/images/icon-user-order-2.png"></image>
+        <view class="user-order-name">待发货</view>
+      </navigator>
+       <navigator class="user-order-item" hover-class="none" url="/pages/order/index?currentIndex=3">
+        <image class="user-order-icon" src="/images/icon-user-order-3.png"></image>
+        <view class="user-order-name">待收货</view>
+      </navigator>
+       <view class="user-order-item">
+        <image class="user-order-icon" src="/images/icon-user-order-4.png"></image>
+        <view class="user-order-name">待评价</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="user-nav">
+    <view class="user-nav-item">
+      <image class="user-nav-icon" src="/images/icon-user-nav-member.png"></image>
+      <view class="user-nav-bd">我的团队</view>
+      <view class="user-nav-ft"></view>
+    </view>
+    <view class="user-nav-item">
+      <image class="user-nav-icon" src="/images/icon-user-nav-collage.png"></image>
+      <view class="user-nav-bd">我的拼团</view>
+      <view class="user-nav-ft"></view>
+    </view>
+    <view class="user-nav-item">
+      <image class="user-nav-icon" src="/images/icon-user-nav-qrcode.png"></image>
+      <view class="user-nav-bd">推荐二维码</view>
+      <view class="user-nav-ft"></view>
+    </view>
+    <view class="user-nav-item">
+      <image class="user-nav-icon" src="/images/icon-user-nav-service.png"></image>
+      <view class="user-nav-bd">售后服务</view>
+      <view class="user-nav-ft"></view>
+    </view>
+    <view class="user-nav-item">
+      <image class="user-nav-icon" src="/images/icon-user-nav-point.png"></image>
+      <view class="user-nav-bd">积分中心</view>
+      <view class="user-nav-ft"></view>
+    </view>
+    <navigator class="user-nav-item" url="/pages/address/address">
+      <image class="user-nav-icon" src="/images/icon-user-nav-address.png"></image>
+      <view class="user-nav-bd">收货地址</view>
+      <view class="user-nav-ft"></view>
+    </navigator>
+  </view>
+</view>

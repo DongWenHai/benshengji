@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "购物车",
+  "usingComponents": {
+    "i-cart-item": "/components/cart-item/cart-item"
+  }
+}

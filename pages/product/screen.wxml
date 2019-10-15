@@ -1,0 +1,15 @@
+<view class="cat" hidden="{{hidden}}">
+  <view class="mask" animation="{{animationMask}}" catchtap="hiddenCat" catchtouchmove="unmove"></view>
+  <view class="cat-container" animation="{{animationContainer}}">
+    <view class="screen-title">价格区间</view>
+    <view class="screen-prices">
+      <input class="screen-price" type="number" placeholder="最低价格" value="{{s_money}}" bindinput="setSmoney"></input>
+      <view class="line">—</view>
+      <input class="screen-price" type="number" placeholder="最高价格" value="{{e_money}}" bindinput="setEmoney"></input>
+    </view>
+    <view class="screen-operate">
+      <view class="screen-btn reset" bindtap="reset">重置</view>
+      <view class="screen-btn confirm" bindtap="confirm">确定</view>
+    </view>
+  </view>
+</view>
