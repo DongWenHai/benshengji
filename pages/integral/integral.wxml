@@ -1,0 +1,31 @@
+<!--pages/integral/integral.wxml 积分中心-->
+<view class="this">
+  <view class="top">
+    <view class="top_now" style="background: url('../../images/integral.png') center no-repeat;background-size: 100%;">
+      <view class="top_now_num">49658</view>
+      <view>当前积分</view>
+    </view>
+  </view>
+  <!-- center -->
+  <view class="center">
+    <view class="integral_des"><text>-</text> 积分明细 <text>-</text></view>
+    <view class="center_all">
+      <view class="center_one">
+        <view class="center_one_left">
+          <view class="center_li"></view>
+          <view class="center_one_left_name">每日签到</view>
+        </view>
+        <view class="center_one_right">+50</view>
+      </view>
+      
+      <view class="center_one">
+        <view class="center_one_left">
+          <view class="center_li"></view>
+          <view class="center_one_left_name">每日签到</view>
+        </view>
+        <view class="center_one_right">+50</view>
+      </view>
+
+    </view>
+  </view>
+</view>

@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/integral/integral",
     "pages/index/index",
     "pages/product/product",
     "pages/show/show",
