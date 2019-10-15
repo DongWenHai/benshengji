@@ -3,6 +3,7 @@
 const app = getApp();
 var appLoadMixin = require('../../mixin/appLoadMixin.js');
 const request = require('../../utils/request.js');
+var a =0;
 
 Page(getApp().initMixin({
   mixins: [appLoadMixin.default],
