@@ -40,6 +40,7 @@ page{
   background-color: #F7F7F7
 }
 .no_notes{
+  margin-top: 20rpx;
   text-align: center;
   font-size:26rpx;
   color: #999999;

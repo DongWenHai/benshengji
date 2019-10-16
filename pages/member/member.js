@@ -26,37 +26,7 @@ Page({
         console.log(res)
         if (res.code == 0) {
           this.setData({
-            member: [{
-              "wxxcx_id": "307",//微信ID
-              "nickName": "伞兵卢本伟二号准备就绪",//微信昵称
-              "vipLevel": "1",//会员等级
-              "vip_name": "美丽天使"//等级名称
-            }, {
-                "wxxcx_id": "307",//微信ID
-                "nickName": "伞兵卢本伟二号准备就绪",//微信昵称
-                "vipLevel": "1",//会员等级
-                "vip_name": "美丽天使"//等级名称
-              }, {
-                "wxxcx_id": "307",//微信ID
-                "nickName": "伞兵卢本伟二号准备就绪",//微信昵称
-                "vipLevel": "1",//会员等级
-                "vip_name": "美丽天使"//等级名称
-              }, {
-                "wxxcx_id": "307",//微信ID
-                "nickName": "伞兵卢本伟二号准备就绪",//微信昵称
-                "vipLevel": "1",//会员等级
-                "vip_name": "美丽天使"//等级名称
-              }, {
-                "wxxcx_id": "307",//微信ID
-                "nickName": "伞兵卢本伟二号准备就绪",//微信昵称
-                "vipLevel": "1",//会员等级
-                "vip_name": "美丽天使"//等级名称
-              }, {
-                "wxxcx_id": "307",//微信ID
-                "nickName": "伞兵卢本伟二号准备就绪",//微信昵称
-                "vipLevel": "1",//会员等级
-                "vip_name": "美丽天使"//等级名称
-              }],
+            member: res.data,
           })
         } else {
           wx.showToast({
