@@ -71,3 +71,8 @@ page{
   font-size:28rpx;
   color: #333333;
 }
+.no_notes{
+  text-align: center;
+  font-size:28rpx;
+  color: #999999;
+}

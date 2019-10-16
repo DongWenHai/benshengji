@@ -1,18 +1,42 @@
 // pages/integral/integral.js
+const request = require('../../utils/request.js');
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    integral:[],
+    point: ''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    wx.showLoading({
+      title: '加载中',
+      mask: true
+    })
+    request.post({
+      data: {
+        request: 'private.user.point_home'
+      },
+      success: res => {
+        wx.hideLoading();
+        if (res.code == 0) {
+          this.setData({
+            integral: res.data,
+            point: res.point
+          })
+        } else {
+          wx.showToast({
+            title: res.msg || '获取数据失败，请重试',
+            icon: 'none'
+          })
+        }
+      }
+    }, true)
   },
 
   /**

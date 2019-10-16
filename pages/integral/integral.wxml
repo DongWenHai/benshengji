@@ -2,7 +2,7 @@
 <view class="this">
   <view class="top">
     <view class="top_now" style="background: url('../../images/integral.png') center no-repeat;background-size: 100%;">
-      <view class="top_now_num">49658</view>
+      <view class="top_now_num">{{point}}</view>
       <view>当前积分</view>
     </view>
   </view>
@@ -10,22 +10,16 @@
   <view class="center">
     <view class="integral_des"><text>-</text> 积分明细 <text>-</text></view>
     <view class="center_all">
-      <view class="center_one">
+
+      <view class="center_one" wx:if="{{integral.length}}" wx:for="{{integral}}" wx:key="index">
         <view class="center_one_left">
           <view class="center_li"></view>
-          <view class="center_one_left_name">每日签到</view>
+          <view class="center_one_left_name">{{item.point_source}}</view>
         </view>
-        <view class="center_one_right">+50</view>
-      </view>
-      
-      <view class="center_one">
-        <view class="center_one_left">
-          <view class="center_li"></view>
-          <view class="center_one_left_name">每日签到</view>
-        </view>
-        <view class="center_one_right">+50</view>
+        <view class="center_one_right">{{item.point}}</view>
       </view>
 
+      <view class="no_notes" wx:if="{{integral.length == 0}}">暂无积分明细~</view>
     </view>
   </view>
 </view>
