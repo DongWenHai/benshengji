@@ -6,12 +6,14 @@
     <view class="member-hd">会员等级</view>
     <view class="member-hd">购买记录</view>
   </view>
-
-  <view class="member-item">
-    <view>0</view>
-    <view>昵称</view>
-    <view>等级</view>
+ 
+  <view class="member-item {{index%2==0?'member-item-js':''}}" wx:if="{{member.length}}" wx:for="{{member}}" wx:key="index">
+    <view>{{item.wxxcx_id}}</view>
+    <view>{{item.nickName}}</view>
+    <view>{{item.vip_name}}</view>
     <view class="viewdetail">查看详情</view>
   </view>
+
+  <view class="no_notes" wx:if="{{!member.length}}">暂无团队~</view>
 
 </view>

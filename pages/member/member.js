@@ -1,18 +1,71 @@
 // pages/member/member.js
+const request = require('../../utils/request.js');
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    member:[]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    wx.showLoading({
+      title: '加载中',
+      mask: true
+    })
+    request.post({
+      data: {
+        request: 'private.user.point_home'
+      },
+      success: res => {
+        wx.hideLoading();
+        console.log(res)
+        if (res.code == 0) {
+          this.setData({
+            member: [{
+              "wxxcx_id": "307",//微信ID
+              "nickName": "伞兵卢本伟二号准备就绪",//微信昵称
+              "vipLevel": "1",//会员等级
+              "vip_name": "美丽天使"//等级名称
+            }, {
+                "wxxcx_id": "307",//微信ID
+                "nickName": "伞兵卢本伟二号准备就绪",//微信昵称
+                "vipLevel": "1",//会员等级
+                "vip_name": "美丽天使"//等级名称
+              }, {
+                "wxxcx_id": "307",//微信ID
+                "nickName": "伞兵卢本伟二号准备就绪",//微信昵称
+                "vipLevel": "1",//会员等级
+                "vip_name": "美丽天使"//等级名称
+              }, {
+                "wxxcx_id": "307",//微信ID
+                "nickName": "伞兵卢本伟二号准备就绪",//微信昵称
+                "vipLevel": "1",//会员等级
+                "vip_name": "美丽天使"//等级名称
+              }, {
+                "wxxcx_id": "307",//微信ID
+                "nickName": "伞兵卢本伟二号准备就绪",//微信昵称
+                "vipLevel": "1",//会员等级
+                "vip_name": "美丽天使"//等级名称
+              }, {
+                "wxxcx_id": "307",//微信ID
+                "nickName": "伞兵卢本伟二号准备就绪",//微信昵称
+                "vipLevel": "1",//会员等级
+                "vip_name": "美丽天使"//等级名称
+              }],
+          })
+        } else {
+          wx.showToast({
+            title: res.msg || '获取数据失败，请重试',
+            icon: 'none'
+          })
+        }
+      }
+    }, true)
   },
 
   /**

@@ -8,18 +8,21 @@
   </view>
   <!-- center -->
   <view class="center">
-    <view class="integral_des"><text>-</text> 积分明细 <text>-</text></view>
+    <view class="integral_des">
+      <text>-</text> 积分明细
+      <text>-</text>
+    </view>
     <view class="center_all">
-
-      <view class="center_one" wx:if="{{integral.length}}" wx:for="{{integral}}" wx:key="index">
+      <block wx:if="{{integral.length>0}}">
+      <view class="center_one" wx:for="{{integral}}" wx:key="index">
         <view class="center_one_left">
           <view class="center_li"></view>
           <view class="center_one_left_name">{{item.point_source}}</view>
         </view>
         <view class="center_one_right">{{item.point}}</view>
       </view>
-
-      <view class="no_notes" wx:if="{{integral.length == 0}}">暂无积分明细~</view>
+      </block>
+      <view class="no_notes" wx:else>暂无积分明细~</view>
     </view>
   </view>
 </view>

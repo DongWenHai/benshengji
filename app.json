@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/member/member",
     "pages/index/index",
     "pages/product/product",
     "pages/integral/integral",
@@ -7,7 +8,7 @@
     "pages/car/car",
     "pages/user/user",
     "pages/address/address",
-    "pages/member/member",
+    
     "pages/user/info",
     "pages/settlement/settlement",
     "pages/payResult/payResult",
