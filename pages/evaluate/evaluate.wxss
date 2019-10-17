@@ -1,0 +1,126 @@
+page{
+  background-color: #F4F4F4
+}
+.top_shops{
+  background-color: #fff;
+  box-sizing: border-box;
+  padding: 20rpx 30rpx;
+  border-top: 1px solid #eeeeee;
+  display: flex;
+  align-items: center;
+}
+.top_shops_left{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  margin-right: 90rpx;
+}
+.top_shops_left>image{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 10rpx;
+  margin-right: 20rpx;
+  flex-shrink: 0;
+}
+.shop_name{
+  font-size:26rpx;
+  color: #666666;
+}
+.shop_price{
+  font-size:24rpx;
+  color: #333333;
+}
+.top_shop_right{
+  padding: 0 20rpx;
+  font-size:32rpx;
+  color: #258985
+}
+.center_shops{
+  width: 90%;
+  min-height: 410rpx;
+  height: auto;
+  background-color: #fff;
+  margin: 20rpx auto;
+  border-radius: 10rpx;
+}
+.center_shop_top{
+  height: 90rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 0 24rpx;
+  border-bottom: 1px solid #eeeeee;
+}
+.star {
+  float: left;
+  width: 54rpx;
+  height: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+}
+.star image{
+  width: 40rpx;
+  height: 40rpx;
+  margin-top: 30rpx;
+}
+.center_shop_center{
+  min-height: 319rpx;
+  height: auto;
+  box-sizing: border-box;
+  padding: 20rpx 24rpx;
+}
+.conts{
+  width: 100%;
+  height: auto;
+  background: #fff;
+}
+textarea {
+  width: 100%;
+}
+.areas{
+  height: 160rpx;
+  font-size: 25rpx;
+  margin: 0 auto;
+  overflow: hidden;   
+  position: relative; 
+}
+.currentWordNumber{
+  font-size: 28rpx;
+  position: absolute;
+  left: 0%;
+  bottom: 0rpx;
+  color: #c00;
+}
+.up_shop_img{
+  width: 110rpx;
+  height: 110rpx;
+  border: 1px dashed #999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20rpx;
+}
+.up_shop_img image{
+  width: 50rpx;
+  height: 50rpx;
+}
+.updata_img{
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+.parcel{
+ width:110rpx;
+  height:110rpx;
+  float:left;
+  margin-right:15rpx;
+   margin-bottom: 10rpx;
+  position: relative;
+}
+.According{
+  width:110rpx;
+  height:110rpx;
+  float:left;
+  margin-bottom: 10rpx;
+}

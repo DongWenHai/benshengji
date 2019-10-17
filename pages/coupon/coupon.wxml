@@ -1,0 +1,13 @@
+<!--pages/coupon/coupon.wxml-->
+<view class="coupons">
+  <view class="coupon" style="background: url('../../images/coupon1.png') center no-repeat;background-size: 100%;">
+    <view class="coupon_left">
+      <view class="coupon_price"><text>¥</text> 50</view>
+      <view class="coupon_des">
+        <view>新品尝鲜优惠券</view>
+        <view>满199减50</view>
+      </view>
+    </view>
+    <view class="coupon_btn"><text>立\n即\n领\n取</text></view>
+  </view>
+</view>

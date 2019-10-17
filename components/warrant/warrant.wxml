@@ -1,0 +1,19 @@
+<view class="cw">
+  <view class="warrant_top">
+    <image src="../../images/bsj_logo.png"></image>
+    <view class="warrant_name">本生吉</view>
+    <view class="warrant_push">还原初之美</view>
+  </view>
+  
+  <view class="warrant_center">
+    <view class="warrant_ask">登陆后改应用将获得一下权限</view>
+    <view class="warant_about">
+      <image src="../../images/icon-ts.png"></image>
+      <text>获得你的公开信息（昵称、头像等）</text>
+    </view>
+    <view class="warrant_btn" bindtap="warrantLogin">授权并登录</view>
+  </view>
+
+  <view class="about_push">© 2004-2017 Alipay.com. All rights reserved</view>
+
+</view>
