@@ -1,11 +1,20 @@
 <view>
-  <i-img width="750rpx" height="750rpx" loadImg="{{showData.image}}"></i-img>
+  <view class="swiper-container" wx:if="{{showData.imgs.length}}">
+    <swiper class="show-swiper" current="{{swiperCurrent}}" bindchange="swiperChange">
+      <swiper-item wx:for="{{showData.imgs}}" wx:key="index">
+        <i-img width="750rpx" height="750rpx" loadImg="{{item}}" canPreview="{{true}}" imgGroup="{{showData.imgs}}"></i-img>
+      </swiper-item>
+    </swiper>
+    <view class="swiper-player">
+      {{swiperCurrent+1}}/{{showData.imgs.length}}
+    </view>
+  </view>
   <!-- 评价 -->
   <view class="about_show">
     <view>
       <view class="show_user">
         <view class="show_user_all">
-          <i-img width="50rpx" height="50rpx" loadImg="{{showData.avatarUrl}}"></i-img>
+          <i-img width="50rpx" height="50rpx" isCircle="50%" loadImg="{{showData.avatarUrl}}"></i-img>
           <text class="show_user_name">{{showData.nickName}}</text>
         </view>
         <image src="/images/icon-show-des1.png" class="show_hide"></image>

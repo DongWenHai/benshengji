@@ -6,7 +6,7 @@ Component({
   properties: {
     defaultImg: {
       type: String,
-      value: '/images/loading.gif'
+      value: '/images/loading.png'
     },
     width: {
       type: String,

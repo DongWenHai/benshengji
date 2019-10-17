@@ -1,3 +1,4 @@
+<block wx:if="{{loadsuccess}}">
 <view class="index-header">
   <image class="store-logo" src="/images/logo.png"></image>
   <view class="search-container">
@@ -70,3 +71,4 @@
 </view>
 
 <image class="bsg-store-info" mode="widthFix" src="/images/bsj-store.jpg"></image>
+</block>

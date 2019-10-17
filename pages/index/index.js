@@ -14,7 +14,8 @@ Page(getApp().initMixin({
     products1: [],
     products2:[],
     keywords:'',//搜索关键词
-    placeholder:'抢私人定制套装'
+    placeholder:'抢私人定制套装',
+    loadsuccess:false
   },
   onLoad: function () {
     this.initData();
@@ -38,12 +39,16 @@ Page(getApp().initMixin({
             banner_bottom: res.down_banner,
             coupons: res.comm_coupon_list,
             products1: res.product_list[0].product_list,
-            products2: res.product_list[1].product_list
+            products2: res.product_list[1].product_list,
+            loadsuccess:true
           })
         }else{
           wx.showToast({
             title: res.msg || '获取数据失败，请重试',
             icon:'none'
+          })
+          this.setData({
+            loadsuccess: false
           })
         }
       }

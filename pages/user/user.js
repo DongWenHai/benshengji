@@ -21,7 +21,9 @@ Page(getApp().initMixin({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    wx.showNavigationBarLoading();
     commonFn.default.getUserInfo().then((res) => {
+      wx.hideNavigationBarLoading();
       if (res.code == 0) {
         this.setData({
           userInfo: res.userInfo
@@ -33,6 +35,7 @@ Page(getApp().initMixin({
         })
       }
     }).catch((err) => {
+      wx.hideNavigationBarLoading();
       console.log(err)
     })
   },

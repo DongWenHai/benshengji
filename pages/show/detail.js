@@ -5,7 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    showData:''
+    showData:'',
+    swiperCurrent:0
   },
 
   /**
@@ -13,6 +14,11 @@ Page({
    */
   onLoad: function (options) {
     this.getData(options.id);
+  },
+  swiperChange(e) {
+    this.setData({
+      swiperCurrent: e.detail.current
+    })
   },
   getData(id){
     request.post({
