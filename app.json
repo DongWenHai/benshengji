@@ -15,7 +15,10 @@
     "pages/order/index",
     "pages/order/detail",
     "pages/order/refund",
-    "pages/show/detail"
+    "pages/show/detail",
+    "pages/coupon/coupon",
+    "pages/evaluate/evaluate",
+    "pages/warrant/warrant"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -1,0 +1,41 @@
+<view>
+ <view class="top_shops">
+   <view class="top_shops_left">
+     <image src="http://img4.imgtn.bdimg.com/it/u=3101757829,4261949869&fm=26&gp=0.jpg"></image>
+     <view class="shop_des">
+       <view class="shop_name">商品名字商品名字商品名字商品名字</view>
+       <view class="shop_price">¥58.00</view>
+     </view>
+   </view>
+   <view class="top_shop_right">3.5分</view>
+ </view>
+
+ <view class="center_shops">
+  <view class="center_shop_top">
+    <view>商品如何</view>
+    <!-- 评分 -->
+     <view class='right'>
+       <view bindtap="starTap" data-index="{{index}}"  class="star" wx:for="{{userStars}}" wx:key="index">
+        <image src="{{item}}"></image>
+      </view>
+    </view>
+  </view>
+  <view class="center_shop_center">
+    <view class="conts">
+      <textarea class="areas" placeholder='更多评价请写在这里（最多300字）' minlength="{{min}}" maxlength="{{max}}" bindinput="inputs"> 
+        <!-- <text class="currentWordNumber">{{currentWordNumber|0}}/{{max}}</text> -->
+      </textarea>
+    </view>
+
+    <view class="updata_img">
+      <view class="up_shop_img" bindtap='choose'>
+       <image src="../../images/icon-photo.png"></image>
+      </view>
+      <view class="parcel" wx:for="{{pics}}" wx:key="{{index}}">
+       <image src="{{pics[index]}}" class="According" data-index="{{index}}" mode="aspectFill" bindtap="previewImg"></image>
+      </view>
+    </view>
+
+  </view>
+ </view>
+</view>
