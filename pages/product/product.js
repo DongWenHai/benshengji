@@ -99,10 +99,13 @@ Page(getApp().initMixin({
       }
     })
   },
-  closeShop(){
+  closeShop(e){
     this.setData({
       showShop: false
     })
+    if(e.detail.type === 'add'){
+      publicFn.setCartNumber(3, e.detail.num || 0)
+    }
   },
   setKeyword(e){
     this.setData({

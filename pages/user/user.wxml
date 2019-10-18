@@ -4,23 +4,23 @@
       <i-img imgClass="user-avater" width="120rpx" height="120rpx" isCircle="50%" loadImg="{{userInfo.avatarUrl}}"></i-img>
       <view class="user-info-co" wx:if="{{!needAuth}}">
         <navigator class="user-name" hover-class="none" url="/pages/user/info">{{userInfo.nickName}}</navigator>
-        <view class="user-level">等级划分</view>
+        <view class="user-level">{{userInfo.vip_name}}</view>
       </view>
       <button wx:else class="auth-btn" open-type="getUserInfo" bindgetuserinfo="getUserInfoAuth">立即登录</button>
     </view>
     <view class="user-data">
       <view class="user-data-item">
-        <view class="user-data-value">0.00</view>
+        <view class="user-data-value">{{userInfo.money}}</view>
         <view class="user-data-name">余额</view>
       </view>
       <view class="user-data-item">
-        <view class="user-data-value">0</view>
+        <view class="user-data-value">{{userInfo.point}}</view>
         <view class="user-data-name">积分</view>
       </view>
-      <view class="user-data-item">
-        <view class="user-data-value">1<text class="unit">张</text></view>
+      <navigator class="user-data-item" hover-class="none" url="/pages/coupon/coupon">
+        <view class="user-data-value">{{userInfo.coupon_count}}<text class="unit">张</text></view>
         <view class="user-data-name">优惠券</view>
-      </view>
+      </navigator>
     </view>
   </view>
   <view class="user-order">
@@ -42,10 +42,10 @@
         <image class="user-order-icon" src="/images/icon-user-order-3.png"></image>
         <view class="user-order-name">待收货</view>
       </navigator>
-       <view class="user-order-item">
+       <navigator class="user-order-item" hover-class="none" url="/pages/order/index?currentIndex=4">
         <image class="user-order-icon" src="/images/icon-user-order-4.png"></image>
         <view class="user-order-name">待评价</view>
-      </view>
+      </navigator>
     </view>
   </view>
 

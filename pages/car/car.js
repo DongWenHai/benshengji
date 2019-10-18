@@ -153,6 +153,11 @@ Page(getApp().initMixin({
           cartList.forEach((v, i) => {
             v.product_price = (v.product_price / 100).toFixed(2);
           })
+          if (cartList.length===0){
+            this.setData({
+              mode:'nomal'
+            })
+          }
           var allCheckedStatus = this.isAllChecked(cartList);//判断是否全部选中
           this.setData({
             cartData: cartList,

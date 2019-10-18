@@ -2,5 +2,6 @@
   "usingComponents": {
     "i-img":"/components/img/img",
     "i-index-title":"/components/index-title/index-title"
-  }
+  },
+  "enablePullDownRefresh": true
 }

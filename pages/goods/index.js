@@ -4,6 +4,7 @@ const request = require('../../utils/request.js');
 const publicFn = require('../../utils/public.js');
 const commonFn = require('../../utils/commonFn.js');
 var appLoadMixin = require('../../mixin/appLoadMixin.js');
+const app = getApp();
 Page(getApp().initMixin({
   mixins: [appLoadMixin.default],
   /**
@@ -47,6 +48,7 @@ Page(getApp().initMixin({
           cart_num:res.cart.total
         })
         publicFn.setCartNumber(3, res.cart.total || 0);
+        WxParse.wxParse("article", "html", res.good_list.data.product_content, this, 0, app.globalData.systemInfo);
       }else{
         this.setData({
           reqMsg: res.msg || '获取产品信息失败',

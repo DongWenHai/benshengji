@@ -72,9 +72,9 @@
     </view>
   </view>
   <!-- 图文详情 -->
-  <!-- <view class="wxParse">
-    <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
-  </view>  -->
+  <view class="wxParse">
+      <template is="wxParse" data="{{wxParseData:article.nodes}}"></template>
+  </view>
   <view class="shop_cart">
     <view class="shops_all_do">
       <navigator class="shop_alls" open-type="switchTab" url="/pages/user/user">

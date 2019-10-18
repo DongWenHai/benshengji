@@ -41,7 +41,7 @@ page{
 .cart-settlement{
   width:194rpx;
   height:100rpx;
-  background:#AB7ED1;
+  background:#258985;
   color:#fff;
   text-align: center;
   line-height:100rpx;

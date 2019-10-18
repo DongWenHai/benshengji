@@ -15,7 +15,8 @@ Page(getApp().initMixin({
     products2:[],
     keywords:'',//搜索关键词
     placeholder:'抢私人定制套装',
-    loadsuccess:false
+    loadsuccess:false,
+    pulldownFresh:false
   },
   onLoad: function () {
     this.initData();
@@ -32,6 +33,11 @@ Page(getApp().initMixin({
       },
       success: res => {
         wx.hideLoading();
+        if (this.data.pulldownFresh){
+          this.setData({
+            pulldownFresh:false
+          })
+        }
         if(res.code == 0){
           this.setData({
             banner_top: res.top_banner,
@@ -63,5 +69,11 @@ Page(getApp().initMixin({
     wx.navigateTo({
       url: '/pages/product/product?keyword=' + this.data.keywords ? this.data.keywords : this.data.placeholder
     })
+  },
+  onPullDownRefresh(){
+    this.setData({
+      pulldownFresh:true
+    })
+    this.initData();
   }
 }))

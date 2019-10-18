@@ -76,11 +76,12 @@ Page(getApp().initMixin({
       success: res => {
         wx.hideLoading();
         if (res.code == 0) {
-          return;
-          res.data.product_price = (res.data.product_price / 100).toFixed(2);
+          res.data.forEach((v) => {
+           v.product_price = (v.product_price / 100).toFixed(2);
+          })
           var addressDefault = res.address_list.constructor === Object ? res.address_list : '';
           this.setData({
-            products: [res.data],
+            products: res.data,
             ship_fee: (res.ship_fee / 100).toFixed(2),
             addressList: addressDefault,
             totalMoney: (res.real_total / 100).toFixed(2)

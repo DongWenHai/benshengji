@@ -5,10 +5,12 @@ var page = Object.assign || function (t) {
   }
   return t;
 }, initMixin = require('./utils/initMixin.js'), networkType = require('./mixin/networkType.js');
+const version = require('./utils/version.js');
 
 App({
   onLaunch: function () {
-  
+    version.updateVersion();
+    this.globalData.systemInfo = wx.getSystemInfoSync();
   },
   initMixin: function (t) {
     var pageObj = (0, initMixin.default)(t), o = this;
@@ -36,5 +38,6 @@ App({
     mixins: [networkType.default],
     userInfo: null,//用户信息
     needAuth:false,//是否需要授权
+    systemInfo:''
   }
 })
