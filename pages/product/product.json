@@ -4,6 +4,7 @@
     "i-img":"/components/img/img",
     "i-shop":"/components/shop/shop",
     "i-cat":"./cat",
-    "i-screen":"./screen"
+    "i-screen":"./screen",
+    "i-auth":"/components/auth/auth"
   }
 }

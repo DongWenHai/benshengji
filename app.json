@@ -17,8 +17,7 @@
     "pages/order/refund",
     "pages/show/detail",
     "pages/coupon/coupon",
-    "pages/evaluate/evaluate",
-    "pages/warrant/warrant"
+    "pages/evaluate/evaluate"
   ],
   "window": {
     "backgroundTextStyle": "light",

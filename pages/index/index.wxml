@@ -30,19 +30,12 @@
   </view>
 </view>
 
-<view class="nav-container">
-  <view class="nav-item">
-    <image class="index-nav-image" mode="aspectFit" src="/images/index-nav-1.png"></image>
-  </view>
-  <view class="nav-item">
-    <image class="index-nav-image" mode="aspectFit" src="/images/index-nav-2.png"></image>
-  </view>
-  <view class="nav-item">
-    <image class="index-nav-image" mode="aspectFit" src="/images/index-nav-3.png"></image>
-  </view>
-  <view class="nav-item">
-    <image class="index-nav-image" mode="aspectFit" src="/images/index-nav-4.png"></image>
-  </view>
+<view class="nav-container" wx:if="{{catArr.length}}">
+  <block wx:for="{{catArr}}" wx:key="index">
+    <view class="nav-item" data-type="{{item.is_show}}" data-cid="{{item.category_id}}" bindtap="navigateToProduct">
+      <image class="index-nav-image" mode="aspectFit" src="{{item.img}}"></image>
+    </view>
+  </block>
 </view>
 
 <i-index-title title="量肤定制" subtitle='解锁焕新"肌"蜜'></i-index-title>

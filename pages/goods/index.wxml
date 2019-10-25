@@ -105,3 +105,6 @@
 </view>
 
 <i-shop show="{{showShop}}" bind:close="closeShop" product="{{product}}" num="{{count}}"></i-shop>
+
+<!-- 授权窗 -->
+<i-auth wx:if="{{showAuth}}" bind:success="authSuccess"></i-auth>

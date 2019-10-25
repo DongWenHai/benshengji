@@ -20,7 +20,7 @@ App({
     var a = this, o = t.watchGlobalData, i = {};
     Object.keys(o).forEach(function (n) {
       var l = o[n].handler || o[n];
-      i[n] = a.globalData[n], (0, e.default)(a, "globalData", n, l.bind(t));
+      i[n] = a.globalData[n]/*, (0, e.default)(a, "globalData", n, l.bind(t))*/;
     }), t.setData(i);
   },
   deleteWatch: function (t) {
@@ -38,6 +38,8 @@ App({
     mixins: [networkType.default],
     userInfo: null,//用户信息
     needAuth:false,//是否需要授权
-    systemInfo:''
+    systemInfo:'',
+    product_keywords:'',
+    product_cid:''
   }
 })

@@ -13,10 +13,10 @@
         <view class="user-data-value">{{userInfo.money}}</view>
         <view class="user-data-name">余额</view>
       </view>
-      <view class="user-data-item">
+      <navigator class="user-data-item" hover-class="none" url="/pages/address/address">
         <view class="user-data-value">{{userInfo.point}}</view>
         <view class="user-data-name">积分</view>
-      </view>
+      </navigator>
       <navigator class="user-data-item" hover-class="none" url="/pages/coupon/coupon">
         <view class="user-data-value">{{userInfo.coupon_count}}<text class="unit">张</text></view>
         <view class="user-data-name">优惠券</view>
@@ -69,6 +69,7 @@
       <image class="user-nav-icon" src="/images/icon-user-nav-service.png"></image>
       <view class="user-nav-bd">售后服务</view>
       <view class="user-nav-ft"></view>
+      <button open-type="contact" class="contact-btn"></button>
     </view>
     <navigator class="user-nav-item" url="/pages/integral/integral">
       <image class="user-nav-icon" src="/images/icon-user-nav-point.png"></image>

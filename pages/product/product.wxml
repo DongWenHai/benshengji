@@ -57,3 +57,4 @@
 <i-cat show="{{showCat}}" cid="{{category_id}}" bind:hidden="hideCat" bind:setcid="setCatId"></i-cat>
 <!-- 筛选面板 -->
 <i-screen show="{{showScreen}}" moneyMin="{{s_money}}" moneyMax="{{e_money}}" bind:hidden="hideScreen" bind:confirm="setPriceScreen"></i-screen>
+<i-auth wx:if="{{showAuth}}" bind:success="authSuccess"></i-auth>

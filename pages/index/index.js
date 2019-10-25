@@ -13,6 +13,7 @@ Page(getApp().initMixin({
     coupons:[],
     products1: [],
     products2:[],
+    catArr:[],
     keywords:'',//搜索关键词
     placeholder:'抢私人定制套装',
     loadsuccess:false,
@@ -44,6 +45,7 @@ Page(getApp().initMixin({
             banner_middle: res.mid_banner,
             banner_bottom: res.down_banner,
             coupons: res.comm_coupon_list,
+            catArr: res.category,
             products1: res.product_list[0].product_list,
             products2: res.product_list[1].product_list,
             loadsuccess:true
@@ -66,9 +68,18 @@ Page(getApp().initMixin({
     })
   },
   search(){
-    wx.navigateTo({
-      url: '/pages/product/product?keyword=' + this.data.keywords ? this.data.keywords : this.data.placeholder
+    app.globalData.product_keywords = (this.data.keywords ? this.data.keywords : this.data.placeholder);
+    wx.switchTab({
+      url: '/pages/product/product'
     })
+  },
+  navigateToProduct(e){
+    if(e.currentTarget.dataset.type == '0'){
+      app.globalData.product_cid = e.currentTarget.dataset.cid;
+      wx.switchTab({
+        url: '/pages/product/product'
+      })
+    }
   },
   onPullDownRefresh(){
     this.setData({

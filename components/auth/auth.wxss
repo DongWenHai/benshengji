@@ -1,0 +1,78 @@
+
+.cw{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: #F4F4F4;
+  top:0;
+  left:0;
+  z-index:999;
+}
+.warrant_top{
+  height:414rpx;
+  background-color: #fff;
+  text-align: center;
+  border-top: 1px solid #eeeeee;
+  box-sizing: border-box;
+  padding-top: 90rpx;
+}
+.warrant_top>image{
+  width: 129rpx;
+  height: 129rpx;
+}
+.warrant_name{
+  font-size:32rpx;
+  color: #333333;
+  font-weight: bold;
+  text-align: center;
+  margin: 5rpx 0 16rpx 0;
+}
+.warrant_push{
+  letter-spacing:22rpx;
+  font-size:26rpx;
+  color: #666666;
+  text-align: center;
+}
+.warrant_center{
+  box-sizing: border-box;
+  padding: 30rpx 50rpx;
+}
+.warrant_ask{
+  font-size:30rpx;
+  color: #333333;
+  font-weight: bold;
+  margin-bottom: 16rpx;
+  font-family:PingFangSC-Semibold,PingFangSC;
+}
+.warant_about{
+  display: flex;
+  align-items: center;
+}
+.warant_about>image{
+  width: 29rpx;
+  height: 29rpx;
+  margin-right: 10rpx;
+}
+.warant_about>text{
+  font-size:30rpx;
+  color: #333333;
+}
+.warrant_btn{
+  width: 450rpx;
+  height: 80rpx;
+  margin: 44rpx auto 0;
+  background-color: #258985;
+  font-size:30rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 80rpx;
+}
+.about_push{
+  text-align: center;
+  font-size:24rpx;
+  color: #cccccc;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 48rpx;
+}

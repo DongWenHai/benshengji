@@ -26,6 +26,30 @@ exports.default = {
       }, true)
     })
   },
+  //更新用户信息
+  updateInfo(userInfo){
+    return new Promise((resolve,reject) => {
+      request.post({
+        data: {
+          request: 'private.weixin.update_info',
+          userInfo: JSON.stringify(userInfo)
+        },
+        success: res => {
+          if (res.code == 0) {
+            resolve();
+          } else {
+            if(reject){
+              reject({ msg: res.msg || '更新信息失败'})
+            }
+            wx.showToast({
+              title: res.msg || '更新信息失败',
+              icon: 'none'
+            })
+          }
+        }
+      }, true)
+    })
+  },
   //获取商品详情
   getProductDetail(pid){
     return new Promise((resolve) => {

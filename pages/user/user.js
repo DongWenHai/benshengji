@@ -1,6 +1,6 @@
 
 const commonFn = require('../../utils/commonFn.js'), appLoadMixin = require('../../mixin/appLoadMixin.js');
-var Token = require('../../utils/token.js'),tokenObj = new Token();
+var app = getApp();
 Page(getApp().initMixin({
   mixins: [appLoadMixin.default],
   /**
@@ -34,17 +34,22 @@ Page(getApp().initMixin({
           icon: 'none'
         })
       }
+      app.watchGlobalData(this);
     }).catch((err) => {
       wx.hideNavigationBarLoading();
       console.log(err)
     })
   },
   getUserInfoAuth(e){
-    console.log(e)
     if (e.detail.errMsg === "getUserInfo:ok"){
-      tokenObj.updateToken(e.detail.userInfo).then(() => {
+      commonFn.default.updateInfo(e.detail.userInfo).then(() => {
         this.setData({
           needAuth:false
+        })
+        app.globalData.needAuth = false;
+        wx.setStorage({
+          key: 'needAuth',
+          data: false
         })
         commonFn.default.getUserInfo().then((res) => {
           if(res.code == 0){

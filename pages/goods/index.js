@@ -19,7 +19,8 @@ Page(getApp().initMixin({
     count:1,//已选数量
     banner:[],
     cart_num:0,//购物车数量
-    reqMsg:''
+    reqMsg:'',
+    showAuth:false
   },
 
   /**
@@ -63,9 +64,15 @@ Page(getApp().initMixin({
     })
   },
   showShopEvt(){
-    this.setData({
-      showShop: true
-    })
+    if(this.data.needAuth){
+      this.setData({
+        showAuth:true
+      })
+    }else{
+      this.setData({
+        showShop: true
+      })
+    }
   },
   closeShop(e){
     if (e.detail.type == 'add'){
@@ -82,11 +89,18 @@ Page(getApp().initMixin({
       })
     }
   },
+  authSuccess(){
+    this.setData({
+      needAuth:false,
+      showAuth:false
+    })
+    app.globalData.needAuth = false;
+  },
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    app.watchGlobalData(this);
   },
 
   /**

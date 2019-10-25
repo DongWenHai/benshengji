@@ -24,6 +24,7 @@ Page(getApp().initMixin({
     showCat:false,//显示分类面板
     showScreen:false,//显示筛选面板
     productShop:{},//购买商品信息
+    showAuth:false
   },
 
   setCondition: function (e) {
@@ -77,27 +78,33 @@ Page(getApp().initMixin({
    */
   onLoad: function (options) {
     this.setData({
-      keyword: options.keyword || ''
+      keyword: options.keyword || '',
+      category_id:options.cid || ''
     })
-    this.getProducts();
   },
   showShopEvt(e){
-    var pid = e.currentTarget.dataset.pid;
-    commonFn.default.getProductDetail(pid).then((res) => {
-      if(res.code == 0){
-        res.good_list.data.product_fake_price = (res.good_list.data.product_fake_price / 100).toFixed(2);
-        res.good_list.data.product_price = (res.good_list.data.product_price/100).toFixed(2);
-        this.setData({
-          showShop: true,
-          productShop: res.good_list.data
-        })
-      }else{
-        wx.showToast({
-          title: res.msg || '获取商品信息失败',
-          icon:'none'
-        })
-      }
-    })
+    if(this.data.needAuth){
+      this.setData({
+        showAuth:true
+      })
+    }else{
+      var pid = e.currentTarget.dataset.pid;
+      commonFn.default.getProductDetail(pid).then((res) => {
+        if(res.code == 0){
+          res.good_list.data.product_fake_price = (res.good_list.data.product_fake_price / 100).toFixed(2);
+          res.good_list.data.product_price = (res.good_list.data.product_price/100).toFixed(2);
+          this.setData({
+            showShop: true,
+            productShop: res.good_list.data
+          })
+        }else{
+          wx.showToast({
+            title: res.msg || '获取商品信息失败',
+            icon:'none'
+          })
+        }
+      })
+    }
   },
   closeShop(e){
     this.setData({
@@ -230,11 +237,38 @@ Page(getApp().initMixin({
     })
     this.getProducts();
   },
+  authSuccess() {
+    this.setData({
+      needAuth: false,
+      showAuth: false
+    })
+    app.globalData.needAuth = false;
+  },
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    app.watchGlobalData(this);
+    if(app.globalData.product_keywords){
+      this.setData({
+        keyword: app.globalData.product_keywords
+      })
+      app.globalData.product_keywords = '';
+    }
+    if (app.globalData.product_cid){
+      this.setData({
+        category_id: app.globalData.product_cid
+      })
+      app.globalData.product_cid = '';
+    }
+    this.setData({
+      showShop: false,//显示购买面板
+      curpage: 1,//商品分页
+      allLoaded: false,//商品数据加载完成
+      loading: false,//加载状态
+    })
+    
+    this.getProducts();
   },
   /**
    * 页面上拉触底事件的处理函数
@@ -243,5 +277,10 @@ Page(getApp().initMixin({
     if(!this.data.allLoaded){
       this.getProducts();
     }
+  },
+  onHide(){
+    this.setData({
+      showAuth:false
+    })
   }
 }))
