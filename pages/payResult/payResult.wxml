@@ -2,7 +2,7 @@
   <icon class="type-icon" type="success" size="90" color="#258985"></icon>
   <view class="pay-status">支付成功</view>
   <view class="opa-btns">
-    <view class="nav-home">回到首页</view>
-    <view class="nav-order">查看订单</view>
+    <navigator class="nav-home" open-type="switchTab" url="/pages/index/index">回到首页</navigator>
+    <navigator class="nav-order" open-type="redirect" url="/pages/order/index?currentIndex=2">查看订单</navigator>
   </view>
 </view>

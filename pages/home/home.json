@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "经销商管理",
+  "usingComponents": {
+    "i-index-cover":"/components/index-cover/index-cover"
+  }
+}

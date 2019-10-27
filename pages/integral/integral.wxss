@@ -21,10 +21,19 @@ page{
   overflow: hidden;
   color: #fff;
   font-size:28rpx;
+  position:relative;
+}
+.point-card-bg{
+  width:100%;
+  position:absolute;
+  left:0;
+  top:0;
+  z-index:0;
 }
 .top_now>view{
    width: 100%;
    text-align: center;
+   position:relative;
 }
 .top_now_num{
   font-size:60rpx;

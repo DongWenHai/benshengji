@@ -13,7 +13,7 @@
         <view class="user-data-value">{{userInfo.money}}</view>
         <view class="user-data-name">余额</view>
       </view>
-      <navigator class="user-data-item" hover-class="none" url="/pages/address/address">
+      <navigator class="user-data-item" hover-class="none" url="/pages/integral/integral">
         <view class="user-data-value">{{userInfo.point}}</view>
         <view class="user-data-name">积分</view>
       </navigator>
@@ -55,16 +55,16 @@
       <view class="user-nav-bd">我的团队</view>
       <view class="user-nav-ft"></view>
     </navigator>
-    <view class="user-nav-item">
+    <navigator class="user-nav-item" url="/pages/collage/mycollage">
       <image class="user-nav-icon" src="/images/icon-user-nav-collage.png"></image>
       <view class="user-nav-bd">我的拼团</view>
       <view class="user-nav-ft"></view>
-    </view>
-    <view class="user-nav-item">
+    </navigator>
+    <navigator class="user-nav-item" url="/pages/share/qrcode">
       <image class="user-nav-icon" src="/images/icon-user-nav-qrcode.png"></image>
       <view class="user-nav-bd">推荐二维码</view>
       <view class="user-nav-ft"></view>
-    </view>
+    </navigator>
     <view class="user-nav-item">
       <image class="user-nav-icon" src="/images/icon-user-nav-service.png"></image>
       <view class="user-nav-bd">售后服务</view>

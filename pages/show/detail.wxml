@@ -17,7 +17,7 @@
           <i-img width="50rpx" height="50rpx" isCircle="50%" loadImg="{{showData.avatarUrl}}"></i-img>
           <text class="show_user_name">{{showData.nickName}}</text>
         </view>
-        <image src="/images/icon-show-des1.png" class="show_hide"></image>
+        <image bindtap="collect" src="/images/icon-show-des{{collected?2:1}}.png" class="show_hide"></image>
       </view>
       <view class="show_pros_best">{{showData.content}}</view>
     </view>

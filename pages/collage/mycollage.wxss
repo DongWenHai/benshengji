@@ -1,0 +1,16 @@
+.mycollage-nodata{
+  height:1000rpx;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.mycollage-nodata>image{
+  width:120rpx;
+  height:120rpx;
+  margin-bottom:10rpx;
+}
+.mycollage-nodata>view{
+  font-size:24rpx;
+  color:#cdcdcd;
+}

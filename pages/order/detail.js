@@ -25,7 +25,7 @@ Page({
     })
     request.post({
       data:{
-        request:'private.order.gvh.order.detail',
+        request:'private.order.gvh_order_detail',
         orderid:orderid
       },
       success: res => {
@@ -95,7 +95,7 @@ Page({
         if (res.confirm) {
           request.post({
             data: {
-              request: 'private.order.gvh.cancel',
+              request: 'private.order.bsj_cancel',
               orderid: orderid
             },
             success: res => {

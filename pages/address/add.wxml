@@ -11,7 +11,7 @@
     <view class="weui-cell weui-cell-name">
       <view class="weui-cell__hd f16">电话：</view>
       <view class="weui-cell__bd f15">
-        <input class="weui-input" type="text" placeholder="请输入手机号" value="{{formData.phone_val}}" bindinput='setPhone'></input>
+        <input class="weui-input" type="number" placeholder="请输入手机号" value="{{formData.phone_val}}" bindinput='setPhone'></input>
       </view>
     </view>
     <view class="weui-cell weui-cell_access">

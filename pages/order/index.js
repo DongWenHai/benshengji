@@ -168,7 +168,7 @@ Page({
         if(res.confirm){
           request.post({
             data: {
-              request: 'private.order.gvh.cancel',
+              request: 'private.order.bsj_cancel',
               orderid: orderid
             },
             success: res => {
@@ -208,16 +208,29 @@ Page({
       content: '确认删除该订单吗?',
       success: res => {
         if(res.confirm){
-          publicFn.deleteOrder(orderid).then(() => {
-            wx.showToast({
-              title: '删除成功',
-              icon:'none',
-              duration:1500
-            })
-            setTimeout(() => {
-              this.reload();
-            },1500)
-          })
+          request.post({
+            data: {
+              request: 'private.order.bsj_del_order',
+              orderid: orderid
+            },
+            success: ret => {
+              if (ret.code == 0) {
+                wx.showToast({
+                  title: '删除成功',
+                  icon: 'none',
+                  duration: 1500
+                })
+                setTimeout(() => {
+                  this.reload();
+                }, 1500)
+              } else {
+                wx.showToast({
+                  title: ret.msg || '删除订单失败',
+                  icon: 'none'
+                })
+              }
+            }
+          }, true)
         }
       }
     })
@@ -231,7 +244,7 @@ Page({
         if(ret.confirm){
           request.post({
             data:{
-              request:'private.order.confirm.goods',
+              request:'private.order.confirm_goods',
               orderId:e.currentTarget.dataset.orderid
             },
             success: res => {

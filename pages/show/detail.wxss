@@ -47,10 +47,11 @@
 .show_user_name{
   font-size:28rpx;
   color: #333333;
+  padding-left:10rpx;
 }
 .show_hide{
-  width:36rpx;
-  height:30rpx;
+  width:42rpx;
+  height:42rpx;
 }
 .show_pros_best{
   font-size:28rpx;

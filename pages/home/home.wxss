@@ -1,0 +1,108 @@
+page{
+  height:100%;
+}
+.home{
+  width:100%;
+  height:100%;
+  position:relative;
+  overflow: hidden;
+}
+.home .home-bg{
+  width:100%;
+  height:100%;
+  position:absolute;
+  top:0;
+  left:0;
+  z-index:-1;
+}
+.home-nav{
+  height:810rpx;
+  position:relative;
+  z-index:2;
+}
+.home-nav-icon{
+  width:110rpx;
+  height:110rpx;
+  margin:0 10rpx 0 0;
+}
+.home-nav-item{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  position:absolute;
+}
+.home-nav-item:nth-child(1){
+  left:39rpx;
+  top:102rpx;
+}
+.home-nav-item:nth-child(2){
+  left:200rpx;
+  top:77rpx;
+}
+.home-nav-item:nth-child(4){
+  left:458rpx;
+  top:236rpx;
+}
+.home-nav-item:nth-child(3){
+  left:349rpx;
+  top:118rpx;
+}
+.home-nav-item:nth-child(5){
+  left:488rpx;
+  top:377rpx;
+}
+.home-nav-item:nth-child(6){
+  left:462rpx;
+  top:519rpx;
+}
+.flex-column{
+  flex-direction: column;
+}
+.flex-column .home-nav-name-main,.flex-column .home-nav-name-sub{
+  text-align: center;
+}
+.flex-column .home-nav-icon{
+  margin-bottom:14rpx;
+  margin-right:0;
+}
+.home-nav-name-main{
+  font-size:28rpx;
+  font-family:Source Han Sans CN;
+  color:rgba(70,70,70,1);
+  line-height:30rpx;
+}
+.home-nav-name-sub{
+  font-size:18rpx;
+  font-family:Source Han Sans CN;
+  color:rgba(70,70,70,1);
+  line-height:30rpx;
+}
+.home-info{
+  padding:0 84rpx;
+  box-sizing: border-box;
+}
+.home-info-item{
+  margin-bottom:36rpx;
+  display:flex;
+  align-items: stretch;
+}
+.home-info-label{
+  margin-right:12rpx;
+}
+.home-info-label-main{
+  font-size:31rpx;
+  font-family:Source Han Sans CN;
+  color:rgba(70,70,70,1);
+  line-height:34rpx;
+}
+.home-info-label-sub{
+  font-size:18rpx;
+  font-family:Source Han Sans CN;
+  font-weight:300;
+  color:rgba(70,70,70,1);
+  line-height:19rpx;
+}
+.home-info-value{
+  flex:1;
+  border-bottom:1px solid #464646;
+}

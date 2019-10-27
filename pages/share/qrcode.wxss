@@ -1,0 +1,41 @@
+page{
+  background:#fff;
+}
+.store-info{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top:174rpx;
+}
+.store-name,.store-level{
+  font-size:32rpx;
+  line-height:44rpx;
+  letter-spacing: 1px;
+  margin-top:22rpx;
+}
+.qrcode{
+  width:314rpx;
+  height:314rpx;
+  margin:62rpx auto 0;
+  display:block;
+}
+.canvas{
+  display:flex;
+  justify-content: center;
+}
+.share-canvas{
+  width:718rpx;
+  height:960rpx;
+}
+.save-img-btn{
+  width:540rpx;
+  height:80rpx;
+  margin:40rpx auto 0;
+  text-align:center;
+  line-height:80rpx;
+  font-size:30rpx;
+  color:#fff;
+  background:#69D4CE;
+  border-radius:40rpx;
+}

@@ -1,0 +1,8 @@
+<view class="mycollage">
+
+  <view class="mycollage-nodata">
+    <image src="/images/mycollage.png"></image>
+    <view>暂无拼团</view>
+  </view>
+
+</view>

@@ -1,0 +1,4 @@
+<navigator class="index-cover" hover-class="none" open-type="switchTab" url="/pages/index/index">
+  <image src="/images/index-cover.png"></image>
+  <view>主页</view>
+</navigator>

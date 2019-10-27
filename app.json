@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/home/home",
     "pages/index/index",
     "pages/product/product",
     "pages/integral/integral",
@@ -17,7 +18,9 @@
     "pages/order/refund",
     "pages/show/detail",
     "pages/coupon/coupon",
-    "pages/evaluate/evaluate"
+    "pages/evaluate/evaluate",
+    "pages/collage/mycollage",
+    "pages/share/qrcode"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -85,7 +85,7 @@ Page(getApp().initMixin({
     }else{
       this.setData({
         showShop: false,
-        count: e.detail.count
+        count: e.detail
       })
     }
   },

@@ -1,0 +1,16 @@
+<view class="share">
+  <!-- <view class="store-info">
+    <i-img width="150rpx" height="150rpx" isCircle="50%" loadImg="{{storeData.store_avatarUrl}}"></i-img>
+    <view class="store-name">{{storeData.name}}</view>
+    <view class="store-level">{{storeData.setMeal_name}}</view>
+  </view>
+  <image class="qrcode" src="{{storeData.store_avatarUrl}}"></image> -->
+  
+  <view class="canvas">
+    <canvas class="share-canvas" canvas-id="share-canvas"></canvas>
+  </view>
+
+  <view class="save-img-btn" wx:if="{{showSave}}" bindtap="saveimg">保存图片</view>
+
+
+</view>

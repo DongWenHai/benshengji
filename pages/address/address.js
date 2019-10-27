@@ -86,7 +86,7 @@ Page({
     if (this.data.addressList[e.currentTarget.dataset.index].select_status == 0){
       request.post({
         data: {
-          request: 'private.address.edit.status',
+          request: 'private.address.edit_status',
           address_id: e.currentTarget.dataset.id,
           select_status: this.data.defaultAddress
         },
@@ -130,6 +130,7 @@ Page({
         area: formData.area,
         address_detail: formData.address_detail,
         phone: formData.phone,
+        select_status:1
       },
       success: res => {
         wx.hideLoading();
