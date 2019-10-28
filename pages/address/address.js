@@ -88,7 +88,7 @@ Page({
         data: {
           request: 'private.address.edit_status',
           address_id: e.currentTarget.dataset.id,
-          select_status: this.data.defaultAddress
+          select_status: 1
         },
         success: res => {
           if (res.code == 0) {

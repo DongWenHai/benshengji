@@ -1,0 +1,16 @@
+.errpage{
+  height:1000rpx;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.errpage>image{
+  width:120rpx;
+  height:120rpx;
+}
+.errpage>view{
+  font-size:24rpx;
+  color:#999;
+  margin-top:10rpx;
+}

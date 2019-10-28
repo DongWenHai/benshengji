@@ -41,5 +41,10 @@ App({
     systemInfo:'',
     product_keywords:'',
     product_cid:''
+  },
+  onPageNotFound(res) {
+    wx.redirectTo({
+      url: '/pages/errpage/errpage'
+    }) // 如果是 tabbar 页面，请使用 wx.switchTab
   }
 })
