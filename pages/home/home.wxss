@@ -55,6 +55,10 @@ page{
   left:462rpx;
   top:519rpx;
 }
+.home-nav-item:nth-child(7){
+  left:400rpx;
+  top:650rpx;
+}
 .flex-column{
   flex-direction: column;
 }

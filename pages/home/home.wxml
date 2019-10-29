@@ -43,6 +43,13 @@
         <view class="home-nav-name-sub">Attention</view>
       </view>
     </view>
+    <navigator class="home-nav-item" open-type="switchTab" hover-class="none" url="/pages/index/index">
+      <image class="home-nav-icon" src="/images/home-nav-6.png"></image>
+      <view class="home-nav-name">
+        <view class="home-nav-name-main">进入商城</view>
+        <view class="home-nav-name-sub">Attention</view>
+      </view>
+    </navigator>
   </view>
 
   <view class="home-info">
@@ -77,4 +84,4 @@
   </view>
 </view>
 
-<i-index-cover></i-index-cover>
+<!-- <i-index-cover></i-index-cover> -->
