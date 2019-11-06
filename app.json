@@ -21,7 +21,14 @@
     "pages/evaluate/evaluate",
     "pages/collage/mycollage",
     "pages/share/qrcode",
-    "pages/errpage/errpage"
+    "pages/errpage/errpage",
+    "pages/home/parter",
+    "pages/home/dealer",
+    "pages/home/antifake",
+    "pages/home/report",
+    "pages/home/news",
+    "pages/home/newsDetail",
+    "pages/home/wechat"
   ],
   "window": {
     "backgroundTextStyle": "light",

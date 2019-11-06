@@ -1,50 +1,50 @@
 <view class="home">
   <image class="home-bg" mode="widthFix" src="/images/home-bg.png"></image>
   <view class="home-nav">
-    <view class="home-nav-item flex-column">
+    <navigator class="home-nav-item flex-column" hover-class="none" url="/pages/home/parter">
       <image class="home-nav-icon" src="/images/home-nav-1.png"></image>
       <view class="home-nav-name">
         <view class="home-nav-name-main">事业伙伴</view>
         <view class="home-nav-name-sub">Partner</view>
       </view>
-    </view>
-    <view class="home-nav-item flex-column">
+    </navigator>
+    <navigator class="home-nav-item flex-column" hover-class="none" url="/pages/home/dealer">
       <image class="home-nav-icon" src="/images/home-nav-2.png"></image>
       <view class="home-nav-name">
         <view class="home-nav-name-main">经销商查询</view>
         <view class="home-nav-name-sub">Inquiries</view>
       </view>
-    </view>
-    <view class="home-nav-item">
+    </navigator>
+    <navigator class="home-nav-item" hover-class="none" url="/pages/home/antifake">
       <image class="home-nav-icon" src="/images/home-nav-3.png"></image>
       <view class="home-nav-name">
         <view class="home-nav-name-main">防伪查询</view>
         <view class="home-nav-name-sub">Security Check</view>
       </view>
-    </view>
-    <view class="home-nav-item">
+    </navigator>
+    <navigator class="home-nav-item" hover-class="none" url="/pages/home/report">
       <image class="home-nav-icon" src="/images/home-nav-4.png"></image>
       <view class="home-nav-name">
         <view class="home-nav-name-main">质检报告</view>
         <view class="home-nav-name-sub">Quality</view>
       </view>
-    </view>
-    <view class="home-nav-item">
+    </navigator>
+    <navigator class="home-nav-item" hover-class="none" url="/pages/home/news">
       <image class="home-nav-icon" src="/images/home-nav-5.png"></image>
       <view class="home-nav-name">
         <view class="home-nav-name-main">新闻中心</view>
         <view class="home-nav-name-sub">News Center</view>
       </view>
-    </view>
-    <view class="home-nav-item">
+    </navigator>
+    <navigator class="home-nav-item" hover-class="none" url="/pages/home/wechat">
       <image class="home-nav-icon" src="/images/home-nav-6.png"></image>
       <view class="home-nav-name">
         <view class="home-nav-name-main">微信关注</view>
         <view class="home-nav-name-sub">Attention</view>
       </view>
-    </view>
+    </navigator>
     <navigator class="home-nav-item" open-type="switchTab" hover-class="none" url="/pages/index/index">
-      <image class="home-nav-icon" src="/images/home-nav-6.png"></image>
+      <image class="home-nav-icon" src="/images/home-nav-7.png"></image>
       <view class="home-nav-name">
         <view class="home-nav-name-main">进入商城</view>
         <view class="home-nav-name-sub">Attention</view>
@@ -58,28 +58,28 @@
         <view class="home-info-label-main">经销商</view>
         <view class="home-info-label-sub">Distributor</view>
       </view>
-      <view class="home-info-value"></view>
+      <view class="home-info-value">{{name}}</view>
     </view>
     <view class="home-info-item">
       <view class="home-info-label">
         <view class="home-info-label-main">经销商微信</view>
         <view class="home-info-label-sub">Distributor's Wechat</view>
       </view>
-      <view class="home-info-value"></view>
+      <view class="home-info-value">{{wx}}</view>
     </view>
     <view class="home-info-item">
       <view class="home-info-label">
         <view class="home-info-label-main">经销商电话</view>
         <view class="home-info-label-sub">Distributor's Tel</view>
       </view>
-      <view class="home-info-value"></view>
+      <view class="home-info-value">{{phone}}</view>
     </view>
     <view class="home-info-item">
       <view class="home-info-label">
         <view class="home-info-label-main">经销商级别</view>
         <view class="home-info-label-sub">Distributor Level</view>
       </view>
-      <view class="home-info-value"></view>
+      <view class="home-info-value">{{level}}</view>
     </view>
   </view>
 </view>

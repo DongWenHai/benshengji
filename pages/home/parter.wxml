@@ -1,0 +1,17 @@
+<view class="parter" wx:if="{{parters.length}}">
+
+  <view class="parter-item" wx:for="{{parters}}" wx:key="index">
+    <view class="parter-img">
+      <image src="{{item.avatarUrl}}"></image>
+    </view>
+    <view class="parter-name">{{item.name}}</view>
+    <view class="parter-pro"><text style="font-size:16rpx;margin-right:10rpx;">●</text> {{item.address}}</view>
+    <view class="parter-pro"><text style="font-size:16rpx;margin-right:10rpx;">●</text> {{item.desc}}</view>
+    <view class="parter-pro"><text style="font-size:16rpx;margin-right:10rpx;">●</text> {{item.phone}}</view>
+  </view>
+
+</view>
+<view class="parter-nodata" wx:else>
+  <image src="/images/errpage.png"></image>
+  <view>暂无数据</view>
+</view>

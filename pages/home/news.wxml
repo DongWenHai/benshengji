@@ -1,0 +1,13 @@
+<view class="news" wx:if="{{news.length}}">
+
+  <navigator class="news-item" wx:for="{{news}}" wx:key="index" url="/pages/home/newsDetail?id={{item.id}}">
+    <view class="news-title">{{item.title}}</view>
+    <image class="icon-right" src="/images/arrow-right.png"></image>
+  </navigator>
+
+</view>
+
+<view class="parter-nodata" wx:else>
+  <image src="/images/errpage.png"></image>
+  <view>暂无数据</view>
+</view>

@@ -1,0 +1,29 @@
+page{
+  background:#f4f4f4;
+}
+.wechat{
+  background:#fff;
+  padding:60rpx 40rpx;
+  box-sizing: border-box;
+}
+.wechat-bsj{
+  display:flex;
+  align-items: center;
+}
+.bsj-logo{
+  width:160rpx;
+}
+.wechat-bsj-info{
+  flex:1;
+  margin-left:30rpx;
+}
+.wechat-bsj-info .name{
+  font-size:32rpx;
+  color:#333;
+  font-weight: bold;
+}
+.wechat-bsj-info .des{
+  font-size:28rpx;
+  color:#333;
+  margin-top:5px;
+}

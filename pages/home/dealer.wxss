@@ -1,0 +1,70 @@
+page{
+  background:#F4F4F4;
+}
+.dealer{
+  background:#006A25;
+  padding:43rpx 0 26rpx 0;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.dealer-logo{
+  width:120rpx;
+  height:171rpx;
+}
+.dealer-search-box{
+  width:598rpx;
+  height:70rpx;
+  display:flex;
+  align-items: center;
+  background:#fff;
+  margin-top:42rpx;
+}
+.dealer-search-box>image{
+  width:36rpx;
+  height:36rpx;
+  margin:0 16rpx;
+}
+.dealer-search-box>input{
+  flex:1;
+  line-height:70rpx;
+  font-size:28rpx;
+}
+.search-btn{
+  width:200rpx;
+  height:70rpx;
+  margin-top:42rpx;
+  background:#073818;
+  color:#CBCBCB;
+  font-size:28rpx;
+  text-align: center;
+  line-height:70rpx;
+  border-radius:8rpx;
+}
+.search-btn:active{
+  opacity:0.7;
+}
+.dealer-info{
+  padding:40rpx 60rpx;
+  box-sizing: border-box;
+}
+.dealer-info-item{
+  display:flex;
+  align-items: center;
+  border-bottom:1px solid #eeeeee;
+  padding:20rpx 0;
+  font-size:28rpx;
+}
+.dealer-info-label{
+  width:160rpx;
+}
+.dealer-info-value{
+  flex:1;
+}
+.msg-info{
+  padding:40rpx;
+  text-align: center;
+  font-size:28rpx;
+  color:#999;
+}

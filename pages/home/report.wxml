@@ -1,0 +1,5 @@
+<view class="report">
+  <block wx:for="{{imgs}}" wx:key="index">
+  <image mode="widthFix" src="{{item.image}}"></image>
+  </block>
+</view>

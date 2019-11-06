@@ -1,0 +1,19 @@
+<view class="antifake">
+  <view class="antifake-img">
+    <text>防伪指示图片</text>
+  </view>
+  <view class="antifake-input">
+    <image src="/images/icon-search.png"></image>
+    <input type="text" placeholder="请输入防伪码" value="{{code}}" bindtap="setCode" bindconfirm="search"></input>
+  </view>
+  <view class="search-btn" bindtap="search">查询</view>
+</view>
+
+<view class="antifake-result" wx:if="{{loading===1}}">
+  <i-img width="160rpx" height="160rpx" isCircle="8rpx" loadImg="{{data.product_img}}"></i-img>
+  <view class="product-name">{{data.product_name}}</view>
+</view>
+
+<view class="msg-info" wx:if="{{loading===2}}">
+  {{msg}}
+</view>

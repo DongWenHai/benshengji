@@ -1,0 +1,13 @@
+<view class="wechat">
+  <view class="wechat-bsj">
+    <image class="bsj-logo" mode="widthFix" src="/images/bsj-gzh.png"></image>
+    <view class="wechat-bsj-info">
+      <view class="name">本生吉</view>
+      <view class="des">批发和零售</view>
+    </view>
+    
+  </view>
+  <view class="account-ope">
+      <official-account></official-account>
+    </view>
+</view>

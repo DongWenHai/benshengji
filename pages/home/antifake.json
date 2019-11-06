@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "防伪查询",
+  "usingComponents": {
+    "i-img":"/components/img/img"
+  }
+}

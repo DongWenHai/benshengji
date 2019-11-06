@@ -5,10 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    name:'',
-    wx:'',
-    phone:'',
-    level:''
+    imgs:[]
   },
 
   /**
@@ -23,16 +20,18 @@ Page({
     })
     request.post({
       data:{
-        request:'private.find.dealers_admin'
+        request:'private.find.quality_report'
       },
       success: res => {
         wx.hideLoading();
-        if(res.code == 0 && res.dealers=='1'){
+        if(res.code == 0){
           this.setData({
-            name: res.data.dealers_name,
-            wx: res.data.wx_number,
-            phone: res.data.phone,
-            level: res.data.leave
+            imgs:res.data
+          })
+        }else{
+          wx.showToast({
+            title: res.msg || '加载失败，请重试',
+            icon:'none'
           })
         }
       }

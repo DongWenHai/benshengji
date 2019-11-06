@@ -1,0 +1,9 @@
+
+<import src="../../wxParse/wxParse.wxml" />
+<view class="news-detail">
+  <view class="news-title">新闻标题</view>
+  <view class="news-time">jisjdka </view>
+  <view class="news-content">
+    <template is="wxParse" data="{{wxParseData:article.nodes}}"></template>
+  </view>
+</view>
