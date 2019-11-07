@@ -1,55 +1,49 @@
 <view class="home">
   <image class="home-bg" mode="widthFix" src="/images/home-bg.png"></image>
   <view class="home-nav">
-    <navigator class="home-nav-item flex-column" hover-class="none" url="/pages/home/parter">
-      <image class="home-nav-icon" src="/images/home-nav-1.png"></image>
+    <view class="home-nav-item flex-column">
+      <image class="home-nav-icon" src="/images/home-nav_1.png"></image>
       <view class="home-nav-name">
-        <view class="home-nav-name-main">事业伙伴</view>
-        <view class="home-nav-name-sub">Partner</view>
+        <view class="home-nav-name-main">精准检测</view>
+        <view class="home-nav-name-sub">Detection</view>
+      </view>
+    </view>
+    <navigator class="home-nav-item flex-column" hover-class="none" open-type="switchTab" url="/pages/product/product">
+      <image class="home-nav-icon" src="/images/home-nav_2.png"></image>
+      <view class="home-nav-name">
+        <view class="home-nav-name-main">全部产品</view>
+        <view class="home-nav-name-sub">All Products</view>
       </view>
     </navigator>
-    <navigator class="home-nav-item flex-column" hover-class="none" url="/pages/home/dealer">
-      <image class="home-nav-icon" src="/images/home-nav-2.png"></image>
+    <navigator class="home-nav-item" hover-class="none" open-type="switchTab" url="/pages/show/show">
+      <image class="home-nav-icon" src="/images/home-nav_3.png"></image>
       <view class="home-nav-name">
-        <view class="home-nav-name-main">经销商查询</view>
-        <view class="home-nav-name-sub">Inquiries</view>
+        <view class="home-nav-name-main">买家秀</view>
+        <view class="home-nav-name-sub">Buyers Show</view>
       </view>
     </navigator>
-    <navigator class="home-nav-item" hover-class="none" url="/pages/home/antifake">
-      <image class="home-nav-icon" src="/images/home-nav-3.png"></image>
+    <view class="home-nav-item">
+      <image class="home-nav-icon" src="/images/home-nav_4.png"></image>
       <view class="home-nav-name">
-        <view class="home-nav-name-main">防伪查询</view>
-        <view class="home-nav-name-sub">Security Check</view>
+        <view class="home-nav-name-main">客服</view>
+        <view class="home-nav-name-sub">Customer Service</view>
+      </view>
+      <button class="service-btn" open-type="contact"></button>
+    </view>
+    <navigator class="home-nav-item" hover-class="none" open-type="switchTab" url="/pages/user/user">
+      <image class="home-nav-icon" src="/images/home-nav_5.png"></image>
+      <view class="home-nav-name">
+        <view class="home-nav-name-main">我的</view>
+        <view class="home-nav-name-sub">Mine</view>
       </view>
     </navigator>
-    <navigator class="home-nav-item" hover-class="none" url="/pages/home/report">
-      <image class="home-nav-icon" src="/images/home-nav-4.png"></image>
+    <view class="home-nav-item">
+      <image class="home-nav-icon" src="/images/home-nav_6.png"></image>
       <view class="home-nav-name">
-        <view class="home-nav-name-main">质检报告</view>
-        <view class="home-nav-name-sub">Quality</view>
+        <view class="home-nav-name-main">品牌信息</view>
+        <view class="home-nav-name-sub">Brand Information</view>
       </view>
-    </navigator>
-    <navigator class="home-nav-item" hover-class="none" url="/pages/home/news">
-      <image class="home-nav-icon" src="/images/home-nav-5.png"></image>
-      <view class="home-nav-name">
-        <view class="home-nav-name-main">新闻中心</view>
-        <view class="home-nav-name-sub">News Center</view>
-      </view>
-    </navigator>
-    <navigator class="home-nav-item" hover-class="none" url="/pages/home/wechat">
-      <image class="home-nav-icon" src="/images/home-nav-6.png"></image>
-      <view class="home-nav-name">
-        <view class="home-nav-name-main">微信关注</view>
-        <view class="home-nav-name-sub">Attention</view>
-      </view>
-    </navigator>
-    <navigator class="home-nav-item" open-type="switchTab" hover-class="none" url="/pages/index/index">
-      <image class="home-nav-icon" src="/images/home-nav-7.png"></image>
-      <view class="home-nav-name">
-        <view class="home-nav-name-main">进入商城</view>
-        <view class="home-nav-name-sub">Attention</view>
-      </view>
-    </navigator>
+    </view>
   </view>
 
   <view class="home-info">
